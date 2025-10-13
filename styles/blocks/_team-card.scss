@@ -1,0 +1,344 @@
+@use '../helpers/index' as *;
+
+.team-card {
+  --teamCardArrowWidth: #{fluid(19, 24, $desktop, $tablet)};
+  --teamCardNameMgBottom: #{fluid(17, 32, $desktop, $tablet)};
+  /*
+    Использовал точные значения для изображения вместо minmax, потому что gap у карточек --big 
+    и --big-alt разные, из-за чего картинки по-разному сжимались.
+  */
+  --teamCardBigImageWidth: #{fluid(287, 161, $desktop, $tablet-b)};
+
+  width: var(--teamCardImageSize);
+
+  @include tablet {
+    --teamCardNameMgBottom: #{fluid(32, 8, $tablet, $mobile-l)};
+    --teamCardBigImageWidth: #{fluid(431, 140, $desktop, $mobile-l)};
+  }
+
+  @include mobile-b {
+    --teamCardImageSize: #{rem(110)};
+  }
+
+  &__image-container {
+    width: var(--teamCardImageSize);
+    height: var(--teamCardImageSize);
+    margin-bottom: fluid(16, 8, $desktop, $tablet);
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  &__name {
+    width: min-content;
+    margin-bottom: var(--teamCardNameMgBottom);
+
+    font-weight: 700;
+    font-size: fluid(20, 15, $desktop, $tablet);
+    line-height: var(--line-height-md);
+  }
+
+  &__soc1al-item {
+    display: inline-flex;
+  }
+
+  &__role {
+    position: relative;
+
+    padding-right: fluid(10, 0, $tablet, $mobile-b);
+    padding-left: calc(var(--teamCardArrowWidth) + fluid(17, 3));
+
+    line-height: var(--line-height);
+    word-break: break-word;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      translate: 0 -50%;
+
+      content: '';
+      width: var(--teamCardArrowWidth);
+      height: rem(26);
+
+      background: url('../../images/arrow.svg') no-repeat fluid(0, -3) 50% / contain;
+    }
+
+    @include tablet-b {
+      --teamCardArrowWidth: #{rem(20)};
+
+      font-size: rem(14);
+    }
+  }
+
+  &--big {
+    display: grid;
+    width: fit-content;
+    height: auto;
+    grid-template-columns: var(--teamCardBigImageWidth) minmax(rem(156), rem(240));
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      'image-container header'
+      'image-container body'
+      'image-container footer';
+    column-gap: fluid(46, 21);
+
+    @include tablet {
+      column-gap: fluid(60, 30, $tablet, $mobile-l);
+    }
+
+    .team-card {
+      &__header {
+        grid-area: header;
+        margin-bottom: rem(16);
+
+        @include tablet {
+          margin-bottom: rem(14);
+        }
+      }
+
+      &__name {
+        margin-bottom: rem(17.5);
+
+        font-weight: 700;
+        font-size: fluid(36, 21);
+        line-height: var(--line-height);
+      }
+
+      &__role {
+        --teamCardArrowWidth: #{fluid(19, 24, $desktop, $tablet)};
+
+        @include tablet {
+          font-size: rem(16);
+        }
+      }
+
+      &__body {
+        grid-area: body;
+        margin-bottom: fluid(32, 24);
+      }
+
+      &__description {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: var(--line-height-lg-alt);
+        letter-spacing: var(--letter-spacing-md);
+        color: var(--color-light-grey);
+
+        @include tablet-b {
+          font-size: rem(14);
+          line-height: var(--line-height-lg);
+        }
+      }
+
+      &__image {
+        width: initial;
+        height: initial;
+      }
+
+      &__footer {
+        grid-area: footer;
+      }
+
+      &__soc1al-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(24);
+      }
+
+      &__soc1al-link {
+        position: relative;
+
+        line-height: 0;
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+
+          content: '';
+          @include square(rem(44));
+        }
+
+        &:focus-visible {
+          & .team-card__soc1al-link-image {
+            filter: brightness(75%);
+          }
+        }
+
+        @include hover(innerElements) {
+          & .team-card__soc1al-link-image {
+            filter: brightness(75%);
+          }
+        }
+
+        &-image {
+          transition-duration: var(--transition-duration);
+        }
+      }
+
+      &__image-container {
+        position: relative;
+        z-index: 1;
+
+        width: auto;
+        height: auto;
+        margin-bottom: 0;
+
+        grid-area: image-container;
+        aspect-ratio: 287/345;
+
+        &::after {
+          position: absolute;
+          bottom: 2%;
+          right: -19%;
+          z-index: -1;
+
+          content: '';
+          width: 86%;
+          height: 56%;
+
+          background-color: var(--color-orange);
+
+          clip-path: polygon(90% 0, 0 15%, 77.8% 100%);
+        }
+
+        @include mobile-b {
+          aspect-ratio: 1/1;
+        }
+      }
+    }
+  }
+
+  &--big-alt {
+    grid-template-columns: var(--teamCardBigImageWidth) minmax(rem(156), rem(258));
+    column-gap: fluid(40, 15);
+
+    @include tablet {
+      column-gap: fluid(60, 30, $tablet, $mobile-l);
+    }
+
+    .team-card {
+      &__header {
+        @include tablet {
+          margin-bottom: rem(15);
+        }
+      }
+
+      &__name {
+        @include tablet {
+          margin-bottom: rem(16);
+        }
+      }
+
+      &__body {
+        @include mobile-l {
+          padding-right: rem(4);
+        }
+      }
+
+      &__role {
+        --teamCardArrowWidth: #{fluid(19, 24, $desktop, $tablet)};
+      }
+
+      &__image-container {
+        &::after {
+          left: 0.5%;
+          right: 0;
+          bottom: -8.3%;
+          rotate: -184deg;
+
+          background-color: var(--color-blue);
+        }
+      }
+    }
+  }
+
+  &--with-offer {
+    .team-card {
+      &__image-container {
+        background: url('/images/team/4-1x.webp') no-repeat center / contain;
+
+        @media (min-resolution: 2dppx) {
+          background: url('/images/team/4.webp') no-repeat center / contain;
+        }
+      }
+
+      &__role {
+        padding-right: 0;
+      }
+
+      &__name {
+        margin-bottom: 0;
+      }
+
+      &__link {
+        display: flex;
+        align-items: center;
+        padding: rem(3) rem(12) rem(5) rem(12);
+
+        font-weight: 600;
+        font-size: rem(13);
+        line-height: var(--line-height-md);
+        color: var(--color-light);
+
+        box-shadow: 0 4px 10px 0 rgba(44, 11, 11, 0.15);
+        border-radius: rem(13);
+        background-color: var(--color-light-orange);
+
+        &:focus-visible {
+          box-shadow: 0 4px 5px 0 rgba(44, 11, 11, 0.05);
+          background-color: var(--color-orange);
+        }
+
+        @include hover(itself) {
+          box-shadow: 0 4px 5px 0 rgba(44, 11, 11, 0.05);
+          background-color: var(--color-orange);
+        }
+
+        @include tablet-b {
+          position: relative;
+
+          &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            translate: 0 -50%;
+
+            height: rem(44);
+            width: 100%;
+            content: '';
+          }
+        }
+      }
+
+      &__row-group {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: rem(10);
+        column-gap: fluid(21, 11, $desktop, $tablet-b);
+        margin-bottom: var(--teamCardNameMgBottom);
+
+        @include tablet-b {
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  &--little-mobile-b {
+    @include mobile-b {
+      --teamCardImageSize: #{rem(90)};
+
+      .team-card__image-container {
+        height: rem(110);
+      }
+    }
+  }
+}

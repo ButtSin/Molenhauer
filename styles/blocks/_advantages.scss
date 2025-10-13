@@ -1,0 +1,247 @@
+@use '../helpers/index' as *;
+
+.advantages {
+  --advantagesContentWidth: #{fluid(448, 310, $mobile, $mobile-l)};
+
+  position: relative;
+
+  margin-bottom: fluid(185, 106);
+
+  &__header {
+    display: flex;
+    margin-bottom: fluid(86, 32);
+    column-gap: fluid(14, 0, $desktop, $tablet);
+
+    @include tablet-l {
+      flex-direction: column;
+      row-gap: fluid(30, 26, $tablet-l, $mobile);
+    }
+
+    &-group {
+      display: flex;
+      flex-shrink: 0;
+      justify-content: space-between;
+      width: fluid(936, 492, $desktop, $tablet);
+      column-gap: rem(28);
+
+      @include tablet-l {
+        display: contents;
+      }
+
+      & .advantages__description:nth-of-type(1) {
+        @include tablet-l-above {
+          @include visually-hidden;
+        }
+
+        @include tablet-b {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  &__title {
+    flex-shrink: 0;
+    width: fluid(390, 234, $desktop, $tablet);
+
+    font-weight: 700;
+    @include fluid-text(40, 28);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-xxxs);
+    color: var(--color-dark);
+
+    @include tablet-l {
+      width: fluid(600, 265, $tablet-l, $mobile);
+      align-self: center;
+      text-align: center;
+    }
+
+    @include mobile {
+      align-self: flex-start;
+      text-align: left;
+
+      letter-spacing: -0.04em;
+    }
+  }
+
+  &__description {
+    max-width: rem(448);
+    padding-right: rem(8);
+
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: var(--line-height-lg);
+    letter-spacing: var(--letter-spacing-md);
+    color: var(--color-light-grey);
+
+    @include tablet-b {
+      padding-right: rem(20);
+
+      font-size: rem(16);
+    }
+
+    @include tablet-l {
+      width: 100%;
+      max-width: none;
+    }
+
+    @include mobile {
+      width: var(--advantagesContentWidth);
+    }
+  }
+
+  &__body {
+  }
+
+  &__slider {
+    &-wrapper {
+    }
+
+    &-slide {
+    }
+
+    &-button-group {
+      position: absolute;
+      top: fluid(1, -14, $desktop, $tablet-b);
+      z-index: 100;
+
+      width: fluid(936, 492, $desktop, $tablet);
+      height: 100%;
+
+      pointer-events: none;
+    }
+
+    &-button {
+      position: absolute;
+      left: calc(100% + rem(1.5));
+      top: rem(179);
+      translate: 100% 0;
+
+      pointer-events: all;
+
+      &--prev {
+        translate: 0 0;
+      }
+
+      @include tablet-b {
+        display: none;
+      }
+    }
+
+    &-pagination {
+      @include tablet-l-above {
+        top: 0;
+        right: 0;
+        left: auto;
+        bottom: auto;
+
+        display: flex;
+        width: min-content;
+        height: auto;
+        column-gap: 0;
+        padding-left: fluid(36, 12, $desktop, $tablet-b);
+
+        background-color: var(--color-light);
+        box-shadow: 0 rem(20) rem(50) 0 rgba(6, 37, 91, 0.06);
+
+        user-select: none;
+
+        @include tablet-b {
+          width: 100%;
+        }
+
+        .custom-bullet {
+          display: flex;
+          width: rem(180);
+          height: auto;
+          flex-direction: column;
+          row-gap: fluid(24, 20, $desktop, $tablet);
+          padding: rem(17) rem(24) rem(17) rem(24);
+
+          color: #a8acad;
+
+          background: none !important;
+          outline: var(--outline-big);
+          outline-color: transparent;
+          outline-offset: calc(var(--outline-size-big) * -1);
+
+          transition: color var(--transition-duration);
+
+          &:first-child {
+            width: rem(251);
+          }
+
+          &:last-child {
+            &::after {
+              background: none;
+            }
+          }
+
+          &.active {
+            color: var(--color-dark-grey);
+          }
+
+          @include hover {
+            color: var(--color-dark-grey);
+          }
+
+          &:focus-visible {
+            outline: var(--outline-big);
+            border-radius: 0;
+
+            &::after {
+              background: none;
+            }
+          }
+
+          @include tablet-b {
+            width: rem(200);
+            padding: rem(11) rem(18) fluid(18, 10, $tablet-b, $tablet) rem(18);
+
+            &:first-child {
+              width: rem(324);
+            }
+          }
+        }
+
+        .bullet-number {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          @include fluid-text(17, 14, $desktop, $tablet);
+          line-height: var(--line-height);
+          letter-spacing: var(--letter-spacing-md);
+          text-align: start;
+          font-weight: 700;
+
+          .cross {
+            padding-left: fluid(58, 42.5, $desktop, $tablet);
+            padding-top: fluid(14, 9, $desktop, $tablet);
+          }
+        }
+
+        .bullet-title {
+          font-weight: 600;
+          @include fluid-text(20, 16, $desktop, $tablet);
+          line-height: 85%;
+          letter-spacing: -0.05em;
+          text-align: left;
+        }
+      }
+
+      @include tablet-l {
+        .custom-bullet {
+          &::after {
+            display: none;
+          }
+        }
+
+        .bullet-number,
+        .bullet-title {
+          display: none;
+        }
+      }
+    }
+  }
+}

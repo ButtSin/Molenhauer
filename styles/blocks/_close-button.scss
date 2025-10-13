@@ -1,0 +1,50 @@
+@use '../helpers/index' as *;
+
+.close-button {
+  --closeButtonIconLineColor: var(--color-light);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(44);
+
+  background-color: transparent;
+
+  transition-duration: var(--transition-duration);
+
+  @include hover(itself, innerElements) {
+    --closeButtonIconLineColor: var(--color-orange);
+  }
+
+  &:focus-visible {
+    --closeButtonIconLineColor: var(--color-orange);
+  }
+
+  &__icon {
+    @include square(rem(26));
+    margin: 0;
+
+    &-line {
+      display: flex;
+      width: 100%;
+      height: rem(3);
+
+      border-radius: 0;
+      background-color: var(--closeButtonIconLineColor);
+
+      transform-origin: 0;
+
+      transition-duration: var(--transition-duration);
+
+      &:first-child {
+        rotate: 45deg;
+        translate: 0.2rem 100%;
+      }
+
+      &:nth-child(2) {
+        rotate: -45deg;
+        translate: 0.2rem 1.13rem;
+      }
+    }
+  }
+}

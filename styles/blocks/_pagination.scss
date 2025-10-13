@@ -1,0 +1,27 @@
+@use '../helpers/index' as *;
+
+.pagination {
+  --paginationBulletSize: #{rem(11)};
+  display: flex;
+  justify-content: center;
+  column-gap: rem(4);
+  height: var(--paginationBulletSize);
+
+  .swiper-pagination-bullet {
+    @include square(var(--paginationBulletSize));
+    padding: 0;
+    margin: 0 !important;
+    background-color: #d9d9d9;
+    opacity: 1;
+
+    cursor: default;
+
+    &.swiper-pagination-bullet-active {
+      background-color: var(--color-orange);
+    }
+  }
+
+  @include tablet-b {
+    --paginationBulletSize: #{rem(10)};
+  }
+}

@@ -1,0 +1,173 @@
+@use 'sass:list';
+@use './functions' as *;
+
+$desktop-b-media: 2560.98;
+$desktop-media: 1728.98;
+$desktop-l-media: 1480.98;
+$tablet-b-media: 1180.98;
+$tablet-media: 834.98;
+$tablet-l-media: 824.98;
+$mobile-b-media: 580.98;
+$mobile-media: 500.98;
+$mobile-l-media: 390.98;
+
+$desktop-b: 2560;
+$desktop: 1728;
+$desktop-l: 1480;
+$tablet-b: 1180;
+$tablet: 834;
+$tablet-l: 824;
+$mobile-b: 580;
+$mobile: 500;
+$mobile-l: 390;
+
+@mixin desktop-b {
+  @media (width <= rem($desktop-b-media)) {
+    @content;
+  }
+}
+
+@mixin desktop-b-above {
+  @media (width > rem($desktop-b-media)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (width <= rem($desktop-media)) {
+    @content;
+  }
+}
+
+@mixin desktop-l-above {
+  @media (width > rem($desktop-l-media)) {
+    @content;
+  }
+}
+
+@mixin desktop-l {
+  @media (width <= rem($desktop-l-media)) {
+    @content;
+  }
+}
+
+@mixin desktop-above {
+  @media (width > rem($desktop-media)) {
+    @content;
+  }
+}
+
+@mixin tablet-b {
+  @media (width <= rem($tablet-b-media)) {
+    @content;
+  }
+}
+
+@mixin tablet-b-above {
+  @media (width > rem($tablet-b-media)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (width <= rem($tablet-media)) {
+    @content;
+  }
+}
+
+@mixin tablet-l {
+  @media (width <= rem($tablet-l-media)) {
+    @content;
+  }
+}
+
+@mixin tablet-above {
+  @media (width > rem($tablet-media)) {
+    @content;
+  }
+}
+
+@mixin tablet-l-above {
+  @media (width > rem($tablet-l-media)) {
+    @content;
+  }
+}
+
+@mixin mobile-b {
+  @media (width <= rem($mobile-b-media)) {
+    @content;
+  }
+}
+
+@mixin mobile-b-above {
+  @media (width > rem($mobile-b-media)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (width <= rem($mobile-media)) {
+    @content;
+  }
+}
+
+@mixin mobile-above {
+  @media (width > rem($mobile-media)) {
+    @content;
+  }
+}
+
+@mixin mobile-l {
+  @media (width <= rem($mobile-l-media)) {
+    @content;
+  }
+}
+
+/*
+  Используем список cleanFromDuration, чтобы обнулять transition-duration и 
+  таким образом на мобильных устройствах при тапе по соответствующим элементам 
+  во всех браузерах видеть не начало или середину анимации, а сразу её финал.
+*/
+
+@mixin hover($cleanFromDuration...) {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (any-hover: none) {
+    &:active {
+      @if list.index($cleanFromDuration, itself) {
+        transition-duration: 0s;
+      }
+
+      @if list.index($cleanFromDuration, innerElements) {
+        & * {
+          transition-duration: 0s;
+        }
+      }
+
+      @if list.index($cleanFromDuration, after) {
+        &::after {
+          transition-duration: 0s;
+        }
+      }
+
+      @if list.index($cleanFromDuration, before) {
+        &::before {
+          transition-duration: 0s;
+        }
+      }
+
+      @if list.index($cleanFromDuration, innerPseudo) {
+        & *::after,
+        & *::before {
+          transition-duration: 0s;
+        }
+      }
+
+      @content;
+    }
+  }
+}

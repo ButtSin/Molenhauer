@@ -1,0 +1,224 @@
+@use '../helpers/index' as *;
+
+.team {
+  --teamCardImageSize: #{fluid(215, 113, $desktop, $tablet)};
+  --teamCardRowGap: #{rem(1)};
+
+  @include desktop-l {
+    padding-right: 0;
+  }
+
+  @include tablet {
+    padding-right: var(--container-padding-x);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(40, 24);
+    margin-left: fluid(70, 0, $desktop, $tablet);
+    margin-bottom: fluid(76, 9);
+
+    line-height: var(--line-height);
+  }
+
+  &__title {
+    letter-spacing: var(--letter-spacing-xxxs);
+    font-weight: 700;
+    font-size: fluid(40, 30);
+  }
+
+  &__description {
+    width: fluid(445, 345, $desktop, $tablet);
+
+    font-weight: 400;
+    font-size: rem(32);
+    letter-spacing: var(--letter-spacing-xxxs);
+
+    color: var(--color-orange);
+
+    @include mobile {
+      font-size: rem(30);
+    }
+  }
+
+  &__row-group {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: fluid(146, 70, $desktop, $tablet);
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__group {
+    display: flex;
+    width: 100%;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile-b {
+      width: fit-content;
+    }
+
+    &-title {
+      position: relative;
+      right: fluid(12, 32, $desktop, $tablet);
+
+      padding-top: rem(30);
+      padding-bottom: rem(7);
+      margin-right: fluid(30, 0, $desktop, $tablet);
+
+      letter-spacing: var(--letter-spacing-sm);
+
+      writing-mode: sideways-lr;
+
+      &::before {
+        position: absolute;
+        bottom: 0;
+        right: rem(4);
+        z-index: -1;
+
+        content: '';
+        width: 26px;
+        height: 88px;
+        background: var(--color-light-orange);
+      }
+
+      @include tablet {
+        right: 0;
+
+        padding-block: rem(32) 0;
+        margin-left: rem(5);
+        margin-bottom: rem(31);
+
+        writing-mode: horizontal-tb;
+
+        &::before {
+          right: auto;
+          left: rem(-5);
+          bottom: rem(3);
+
+          width: rem(66);
+          height: rem(19.5);
+        }
+      }
+    }
+
+    &-list {
+      max-width: calc(var(--teamCardImageSize) * 6 + var(--teamCardRowGap) * 5);
+      display: flex;
+      width: fit-content;
+      flex-wrap: wrap;
+      padding-block: rem(79) rem(44);
+      gap: rem(30) var(--teamCardRowGap);
+
+      @include desktop {
+        width: 100%;
+        max-width: initial;
+      }
+
+      @include tablet {
+        --teamCardRowGap: #{fluid(1, 14, $tablet, $mobile-l)};
+
+        padding-block: 0 rem(20);
+        gap: rem(28) var(--teamCardRowGap);
+      }
+
+      @include mobile-b {
+        width: fit-content;
+      }
+    }
+
+    &--fixed-size-alt {
+      .team__group-list {
+        width: calc(var(--teamCardImageSize) * 2 + var(--teamCardRowGap) * 1.1);
+
+        @include mobile-b {
+          width: fit-content;
+        }
+      }
+    }
+
+    &--fixed-size {
+      width: 100%;
+
+      @include desktop {
+        justify-content: end;
+      }
+
+      @include mobile-b {
+        width: fit-content;
+      }
+
+      .team__group-list {
+        width: 100%;
+
+        @include desktop-above {
+          max-width: calc(var(--teamCardImageSize) * 3 + var(--teamCardRowGap) * 2);
+        }
+
+        @include mobile-b {
+          width: fit-content;
+        }
+      }
+
+      li:last-child {
+        .team-card__image-container {
+          position: relative;
+        }
+
+        .team-card__image-container::after {
+          position: absolute;
+          bottom: 2%;
+          right: -10%;
+          rotate: 183deg;
+          z-index: -1;
+
+          content: '';
+          width: 60%;
+          height: 78%;
+
+          background-color: var(--color-light-orange);
+
+          clip-path: polygon(100% 100%, 0 100%, 15% 0);
+
+          @include mobile-b {
+            right: -8%;
+
+            height: 69%;
+          }
+        }
+      }
+    }
+
+    &--big {
+      width: 100%;
+
+      .team__group-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: fluid(70, 15, $desktop, $tablet);
+        padding-block: 0 fluid(97, 32, $desktop, $tablet);
+        max-width: initial;
+        width: 100%;
+
+        @include tablet {
+          padding-block: 0 fluid(97, 32, $tablet, $mobile);
+          grid-template-columns: 1fr;
+          gap: rem(50);
+        }
+      }
+
+      .team__group-title {
+        @include tablet {
+          margin-bottom: rem(40);
+        }
+      }
+    }
+  }
+}

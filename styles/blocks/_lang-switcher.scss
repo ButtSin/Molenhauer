@@ -1,0 +1,87 @@
+@use '../helpers/index' as *;
+
+.lang-switcher {
+  position: relative;
+  z-index: 0;
+
+  display: flex;
+  column-gap: rem(6);
+  align-items: center;
+  width: rem(170);
+  height: rem(56);
+  padding: rem(0) rem(19) rem(2) rem(15);
+
+  background-color: var(--color-light);
+
+  &__button {
+    position: relative;
+
+    height: rem(44);
+    padding-inline: rem(18) rem(6);
+
+    font-size: rem(15);
+    color: rgba(6, 37, 91, 0.4);
+    line-height: var(--line-height-md);
+    letter-spacing: var(--letter-spacing);
+    text-align: right;
+
+    cursor: pointer;
+
+    &::after {
+      @include abs-center;
+
+      content: '';
+      @include square(rem(44));
+
+      border-radius: 50%;
+
+      transition-duration: var(--transition-duration);
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      translate: 0 -50%;
+
+      content: '';
+      @include square(rem(12));
+
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &.is-active {
+      color: rgba(6, 37, 91, 1);
+      text-decoration: underline;
+      text-underline-offset: rem(2);
+      text-decoration-skip-ink: none;
+
+      pointer-events: none;
+    }
+
+    &--de {
+      &::before {
+        background-image: url('../../images/icons/De.svg');
+      }
+    }
+
+    &--en {
+      &::before {
+        background-image: url('../../images/icons/En.svg');
+      }
+    }
+
+    &--fr {
+      &::before {
+        background-image: url('../../images/icons/Fr.svg');
+      }
+    }
+
+    @include hover(itself) {
+      color: rgba(6, 37, 91, 1);
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+  }
+}

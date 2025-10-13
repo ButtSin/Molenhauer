@@ -1,0 +1,42 @@
+@use '../helpers/index' as *;
+
+.cross {
+  position: relative;
+
+  &::before,
+  &::after {
+    @include abs-center;
+
+    content: '';
+    width: fluid(16, 10);
+    height: fluid(2, 1);
+
+    background-color: var(--color-orange);
+  }
+
+  &::after {
+    rotate: 90deg;
+  }
+
+  &::after {
+    rotate: -90deg;
+  }
+
+  &--bottom {
+    height: 100%;
+
+    &::before,
+    &::after {
+      background-color: currentColor;
+
+      @include tablet-b {
+        width: rem(10);
+      }
+
+      @include mobile {
+        width: rem(18);
+        height: rem(2);
+      }
+    }
+  }
+}

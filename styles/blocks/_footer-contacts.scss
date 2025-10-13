@@ -1,0 +1,250 @@
+@use '../helpers/index' as *;
+
+.footer-contacts {
+  &__map {
+    position: relative;
+
+    width: 100%;
+    height: fluid(400, 550);
+
+    border-top: rem(1) solid #a8acad;
+    border-bottom: rem(1) solid var(--color-light-orange);
+    background-color: var(--color-blue);
+
+    [class*='copyrights-pane'] {
+      display: none !important;
+    }
+
+    > [class*='map'] {
+      filter: grayscale(100%);
+    }
+
+    @include tablet {
+      padding-inline: 0;
+
+      border: initial;
+    }
+  }
+
+  &__balloon {
+    position: absolute;
+    left: 0;
+    bottom: fluid(22, 30);
+    z-index: 1;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: fluid(20, 21, $desktop, $tablet) 0 fluid(18, 12, $desktop, $tablet)
+      fluid(76, 34, $desktop, $tablet);
+    grid-template-columns: auto fluid(279, 208, $desktop, $tablet);
+    grid-template-areas:
+      'logo address'
+      'logo so1ial';
+    column-gap: fluid(57, 32, $desktop, $tablet);
+    width: fluid(496, 234);
+    min-height: fluid(346, 240, $desktop, $tablet);
+
+    background-color: var(--color-light);
+    opacity: 0.95;
+
+    @include tablet-b {
+      font-size: rem(13);
+    }
+
+    @include tablet {
+      left: 0;
+
+      padding-top: rem(23);
+      padding-left: fluid(60, 17, $tablet, $mobile);
+      grid-template-columns: auto;
+      grid-template-areas:
+        'address'
+        'so1ial';
+    }
+  }
+
+  &__wrapper-logo {
+    min-width: rem(54);
+    padding-top: rem(3);
+    grid-area: logo;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__logo {
+    &:focus-visible {
+      filter: invert(50%);
+    }
+  }
+
+  &__wrapper-address {
+    position: relative;
+
+    grid-area: address;
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(27, 17);
+    padding-block: fluid(27, 0, $desktop, $tablet) fluid(13, 8, $desktop, $tablet);
+    margin-bottom: fluid(20, 0);
+
+    @include tablet {
+      padding: initial;
+      margin-bottom: rem(25);
+    }
+
+    &::before {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+
+      content: '';
+      height: rem(1);
+      width: 100%;
+
+      background-color: var(--color-light-orange);
+      opacity: 0.23;
+
+      @include tablet {
+        content: initial;
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: rem(15);
+      line-height: var(--line-height-xl-alt);
+      color: var(--color-dark-light);
+
+      @include tablet {
+        font-size: rem(13);
+      }
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+    padding-right: fluid(15, 35, $desktop, $tablet);
+
+    font-family: var(--font-family-second);
+    font-weight: 400;
+  }
+
+  &__place {
+    line-height: var(--line-height-xl);
+    letter-spacing: rem(-0.55);
+
+    @include tablet {
+      letter-spacing: var(--letter-spacing-xxxs);
+      line-height: var(--line-height-xxl);
+    }
+  }
+
+  &__phone-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__phone-item {
+    &:not(:last-child) {
+      &::after {
+        content: '/\00A0';
+      }
+    }
+  }
+
+  &__phone-link {
+    position: relative;
+
+    margin-bottom: rem(2);
+
+    line-height: var(--line-height-xl);
+    letter-spacing: rem(-0.55);
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      translate: 0 -50%;
+
+      height: rem(36);
+      width: 100%;
+      content: '';
+    }
+
+    @include hover(itself) {
+      color: var(--color-orange);
+    }
+
+    &:focus-visible {
+      color: var(--color-orange);
+    }
+
+    @include tablet {
+      margin-top: rem(2);
+
+      letter-spacing: rem(-1);
+    }
+  }
+
+  &__mail-link {
+    position: relative;
+
+    width: fit-content;
+
+    line-height: var(--line-height-xl);
+    letter-spacing: rem(-0.55);
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      translate: 0 -50%;
+
+      height: rem(36);
+      width: 100%;
+      content: '';
+    }
+
+    @include hover(itself) {
+      color: var(--color-orange);
+    }
+
+    &:focus-visible {
+      color: var(--color-orange);
+    }
+  }
+
+  &__wrapper-soc1al {
+    grid-area: so1ial;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-start;
+
+    &-title {
+      letter-spacing: rem(-0.55);
+
+      @include tablet {
+        letter-spacing: var(--letter-spacing-xs);
+      }
+    }
+  }
+
+  &__soc1al-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: fluid(16, 12, $desktop, $tablet);
+    max-width: rem(100);
+    margin-right: fluid(39, 16, $desktop, $tablet);
+
+    @include tablet {
+      translate: 0 rem(-3.5);
+
+      margin-right: rem(27);
+    }
+  }
+}

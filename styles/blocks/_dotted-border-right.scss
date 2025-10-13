@@ -1,0 +1,28 @@
+@use '../helpers/index' as *;
+
+.dotted-border-right {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    content: '';
+    width: rem(1);
+    height: 100%;
+
+    background: repeating-linear-gradient(to bottom, transparent 0 rem(8), #a8acad rem(8) rem(15.5))
+      80% / rem(2) 100% no-repeat;
+  }
+
+  &--displaced {
+    &::after {
+      right: rem(15);
+
+      @include tablet-b {
+        display: none;
+      }
+    }
+  }
+}

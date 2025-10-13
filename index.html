@@ -1,0 +1,2481 @@
+<!doctype html>
+<html
+  lang="en"
+  style="overflow: hidden; scrollbar-gutter: stable"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="ie=edge"
+    />
+
+    <link
+      rel="stylesheet"
+      href="/critical/styles/main.min.css"
+    />
+
+    <title>Molenhauer</title>
+  </head>
+  <body
+    class="main-page"
+    style="overflow: hidden"
+  >
+    <script src="/critical/scripts/preloader.js"></script>
+
+    <header
+      class="main-page__header header"
+      data-js-header
+    >
+      <div class="header__inner">
+        <a
+          class="header__logo"
+          data-js-i18n-aria
+          data-js-i18n-aria-title="headerLogoTitle"
+          data-js-i18n-aria-label="headerLogoLabel"
+          href="#"
+          title="Home"
+          aria-label="Home"
+        >
+          <img
+            class="logo"
+            src="/images/logo.svg"
+            width="263"
+            height="46"
+            alt=""
+          />
+        </a>
+        <nav
+          class="header__menu hidden-tablet"
+          data-js-header-menu
+        >
+          <ul class="header__menu-list hidden-tablet-b">
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link"
+                data-js-i18n="headerLink1"
+                href="#"
+              >
+                Services
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link"
+                data-js-i18n="headerLink2"
+                href="#"
+              >
+                Know How
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link"
+                data-js-i18n="headerLink3"
+                href="#"
+              >
+                Projects & References
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link"
+                data-js-i18n="headerLink4"
+                href="#"
+              >
+                Our Company
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link"
+                data-js-i18n="headerLink5"
+                href="#"
+              >
+                Our Clients
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link"
+                data-js-i18n="headerLink6"
+                href="#"
+              >
+                Careers
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__interaction-group">
+          <a
+            class="header__contact-link button hidden-tablet"
+            data-js-i18n="headerLink7"
+            href="#"
+          >
+            Contact Us
+          </a>
+          <div
+            class="header__lang-switcher lang-switcher hidden-mobile-b"
+            data-js-i18n-aria
+            data-js-i18n-aria-label="headerLangSwitcherLabel"
+            data-js-lang-switcher
+            aria-label="Language
+        selection"
+            role="group"
+          >
+            <button
+              class="lang-switcher__button lang-switcher__button--de reset-button"
+              data-js-lang-switcher-button
+              data-js-lang-switcher-de
+              data-js-i18n="headerLang1"
+              data-js-i18n-aria
+              data-js-i18n-aria-label="headerLang1Label"
+              type="button"
+              aria-label="German"
+              aria-pressed="false"
+            >
+              De.
+            </button>
+            <button
+              class="lang-switcher__button lang-switcher__button--en is-active reset-button"
+              data-js-lang-switcher-button
+              data-js-lang-switcher-en
+              data-js-i18n="headerLang2"
+              data-js-i18n-aria
+              data-js-i18n-aria-label="headerLang2Label"
+              type="button"
+              aria-label="English"
+              aria-pressed="true"
+            >
+              En.
+            </button>
+            <button
+              class="lang-switcher__button lang-switcher__button--fr reset-button"
+              data-js-lang-switcher-button
+              data-js-lang-switcher-fr
+              data-js-i18n="headerLang3"
+              data-js-i18n-aria
+              data-js-i18n-aria-label="headerLang3Label"
+              type="button"
+              aria-label="French"
+              aria-pressed="false"
+            >
+              Fr.
+            </button>
+          </div>
+          <button
+            class="header__burger-button burger-button reset-button visible-tablet-b"
+            data-js-i18n-aria
+            data-js-i18n-aria-title="headerBurgerButtonTitle"
+            data-js-i18n-aria-label="headerBurgerButtonLabel"
+            data-js-header-burger-button
+            type="button"
+            title="Open Menu"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <span class="burger-button__icon">
+              <span class="burger-button__icon-line"></span>
+              <span class="burger-button__icon-line"></span>
+              <span class="burger-button__icon-line"></span>
+            </span>
+          </button>
+        </div>
+        <dialog
+          class="header__modal modal visible-tablet-b"
+          data-js-header-modal
+          aria-labelledby="dialog-title"
+          tabindex="-1"
+        >
+          <h2
+            id="dialog-title"
+            class="visually-hidden"
+            data-js-i18n="headerModalTitle"
+          >
+            Main menu
+          </h2>
+          <div class="modal__header">
+            <button
+              class="modal__close-button close-button reset-button visible-tablet-b"
+              data-js-i18n-aria
+              data-js-i18n-aria-label="headerModalCloseLabel"
+              data-js-i18n-aria-title="headerModalCloseTitle"
+              data-js-header-modal-close-button
+              type="button"
+              title="Close Menu"
+              aria-label="Close
+            menu"
+            >
+              <span class="close-button__icon">
+                <span class="close-button__icon-line"></span>
+                <span class="close-button__icon-line"></span>
+              </span>
+            </button>
+            <div
+              class="modal__lang-switcher lang-switcher"
+              data-js-i18n-aria
+              data-js-i18n-aria-label="headerLangSwitcherLabel"
+              data-js-lang-switcher
+              aria-label="Language selection"
+              role="group"
+            >
+              <button
+                class="lang-switcher__button lang-switcher__button--de reset-button"
+                data-js-lang-switcher-button
+                data-js-lang-switcher-de
+                data-js-i18n="headerLang1"
+                data-js-i18n-aria
+                data-js-i18n-aria-label="headerLang1Label"
+                type="button"
+                aria-label="Deutsche Sprache"
+                aria-pressed="false"
+              >
+                De.
+              </button>
+              <button
+                class="lang-switcher__button lang-switcher__button--en is-active reset-button"
+                data-js-lang-switcher-button
+                data-js-lang-switcher-en
+                data-js-i18n="headerLang2"
+                data-js-i18n-aria
+                data-js-i18n-aria-label="headerLang2Label"
+                type="button"
+                aria-label="English language"
+                aria-pressed="true"
+              >
+                En.
+              </button>
+              <button
+                class="lang-switcher__button lang-switcher__button--fr reset-button"
+                data-js-lang-switcher-button
+                data-js-lang-switcher-fr
+                data-js-i18n="headerLang3"
+                data-js-i18n-aria
+                data-js-i18n-aria-label="headerLang3Label"
+                type="button"
+                aria-label="Français"
+                aria-pressed="false"
+              >
+                Fr.
+              </button>
+            </div>
+          </div>
+          <div class="modal__body">
+            <nav class="modal__menu">
+              <ul class="modal__menu-list">
+                <li class="modal__menu-item">
+                  <a
+                    class="header__menu-link modal__menu-link"
+                    href="#"
+                  >
+                    Services
+                  </a>
+                </li>
+                <li class="header__menu-item modal__menu-item">
+                  <a
+                    class="header__menu-link modal__menu-link"
+                    href="#"
+                  >
+                    Know How
+                  </a>
+                </li>
+                <li class="modal__menu-item">
+                  <a
+                    class="header__menu-link modal__menu-link"
+                    href="#"
+                  >
+                    Projects & References
+                  </a>
+                </li>
+                <li class="modal__menu-item">
+                  <a
+                    class="header__menu-link modal__menu-link"
+                    href="#"
+                  >
+                    Our Company
+                  </a>
+                </li>
+                <li class="modal__menu-item">
+                  <a
+                    class="header__menu-link modal__menu-link"
+                    href="#"
+                  >
+                    Our Clients
+                  </a>
+                </li>
+                <li class="modal__menu-item">
+                  <a
+                    class="header__menu-link modal__menu-link"
+                    href="#"
+                  >
+                    Careers
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <a
+              class="modal__contact-link button visible-tablet"
+              href="#"
+            >
+              Contact Us
+            </a>
+          </div>
+          <div class="modal__footer">
+            <div class="modal__legal-info">
+              <ul class="modal__legal-info-list">
+                <li class="modal__legal-info-item">
+                  <a
+                    class="modal__legal-info-link"
+                    href="#"
+                  >
+                    Imprint
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="modal__legal-info-link"
+                    href="#"
+                  >
+                    Data Privacy
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </dialog>
+      </div>
+    </header>
+    <main class="main-page__main">
+      <section
+        class="main-page__hero hero"
+        aria-labelledby="hero-title"
+      >
+        <div class="hero__container container">
+          <div class="hero__about">
+            <h1
+              id="hero-title"
+              class="hero__about-title"
+            >
+              <span data-js-i18n="heroTitlePart1">Civil</span>
+              <span
+                class="hero__about-title-accent"
+                data-js-i18n="heroTitleAccent1"
+              >
+                Engineering Solutions
+              </span>
+              <span data-js-i18n="heroTitlePart2">For The</span>
+              <span
+                class="hero__about-title-accent"
+                data-js-i18n="heroTitleAccent2"
+              >
+                Cement
+              </span>
+              <span data-js-i18n="heroTitlePart3">Industry</span>
+            </h1>
+            <div class="hero__about-description">
+              <p data-js-i18n="heroDescription1">
+                We are your leading partner for complex brownfield construction projects during
+                ongoing operation.
+              </p>
+              <p data-js-i18n="heroDescription2">
+                Benefit from engineering excellence built on more than 30 years of industry
+                experience.
+              </p>
+            </div>
+            <div class="hero__about-advantages visible-mobile-b">
+              <h2
+                class="visually-hidden"
+                data-js-i18n="heroAdvantagesTitle"
+              >
+                Our advantages
+              </h2>
+              <ul class="hero__about-advantages-list">
+                <li class="hero__about-advantages-item">
+                  <p
+                    class="hero__about-advantages-text"
+                    data-js-i18n="heroDescription3"
+                  >
+                    Agil.
+                  </p>
+                </li>
+                <li class="hero__about-advantages-item">
+                  <p
+                    class="hero__about-advantages-text"
+                    data-js-i18n="heroDescription4"
+                  >
+                    Ganzheitlich.
+                  </p>
+                </li>
+                <li class="hero__about-advantages-item">
+                  <p
+                    class="hero__about-advantages-text"
+                    data-js-i18n="heroDescription5"
+                  >
+                    Zuverlässig.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="hero__about-links">
+              <ul class="hero__about-links-list">
+                <li class="hero__about-links-item">
+                  <a
+                    class="hero__about-links-link button button--bleached-big"
+                    data-js-i18n="heroLink1"
+                    href="#"
+                  >
+                    How can we serve you
+                  </a>
+                </li>
+                <li class="hero__about-links-item">
+                  <a
+                    class="hero__about-links-link button button--bleached-little"
+                    data-js-i18n="heroLink2"
+                    href="#"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="hero__advantages hidden-mobile-b">
+            <h2
+              class="visually-hidden"
+              data-js-i18n="heroAdvantagesTitle"
+            >
+              Our advantages
+            </h2>
+            <ul class="hero__advantages-list">
+              <li class="hero__advantages-item">
+                <p
+                  class="hero__advantages-text"
+                  data-js-i18n="heroDescription3"
+                >
+                  Ganzheitlich.
+                </p>
+              </li>
+              <li class="hero__advantages-item hero__advantages-item--little">
+                <p
+                  class="hero__advantages-text"
+                  data-js-i18n="heroDescription4"
+                >
+                  Agil.
+                </p>
+              </li>
+              <li class="hero__advantages-item hero__advantages-item--big">
+                <p
+                  class="hero__advantages-text"
+                  data-js-i18n="heroDescription5"
+                >
+                  Zuverlässig.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="hero__background">
+          <img
+            class="hero__background-image"
+            src="/images/hero/1.webp"
+            srcset="
+              /images/hero/1.webp      3100w,
+              /images/hero/1-2560.webp 2560w,
+              /images/hero/1-1920.webp 1920w,
+              /images/hero/1-1024.webp 1024w
+            "
+            sizes="100vw"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="hero__background-line hidden-mobile-b"></div>
+          <div class="hero__background-gradient hero__background-gradient--horizontal"></div>
+          <div class="hero__background-gradient hero__background-gradient--vertical"></div>
+          <div class="hero__background-rect"></div>
+          <div class="hero__background-rect-borders"></div>
+        </div>
+      </section>
+      <section
+        class="main-page__services services"
+        aria-labelledby="services-title"
+      >
+        <header class="services__header">
+          <h2
+            id="services-title"
+            class="services__header-title"
+            data-js-i18n="servicesTitle"
+          >
+            Comprehensive Structural Engineering Services
+          </h2>
+          <p
+            class="services__header-description"
+            data-js-i18n="servicesDescription1"
+          >
+            We accompany you from the first idea of your next construction project from the first
+            idea to successful execution.
+          </p>
+        </header>
+        <div class="services__body">
+          <div class="services__body-inner">
+            <ul class="services__list">
+              <li class="services__item">
+                <p>
+                  <span data-js-i18n="servicesDescription2Part1"> Service and </span>
+                  <br />
+                  <span data-js-i18n="servicesDescription2Part2"> Support </span>
+                  <span class="cross"></span>
+                </p>
+              </li>
+              <li class="services__item">
+                <p>
+                  <span data-js-i18n="servicesDescription3Part1"> Preparation of contract </span>
+                  <br class="hidden-mobile" />
+                  <span data-js-i18n="servicesDescription3Part2"> award </span>
+                  <span class="cross"></span>
+                </p>
+              </li>
+              <li class="services__item">
+                <p>
+                  <span data-js-i18n="servicesDescription4Part1"> Construction site </span>
+                  <br />
+                  <span data-js-i18n="servicesDescription4Part2"> consulting </span>
+                  <span class="cross"></span>
+                </p>
+              </li>
+              <li class="services__item">
+                <p>
+                  <span data-js-i18n="servicesDescription5Part1"> Structural design and </span>
+                  <br />
+                  <span data-js-i18n="servicesDescription5Part2"> execution planning </span>
+                  <span class="cross"></span>
+                </p>
+              </li>
+              <li class="services__item">
+                <p>
+                  <span data-js-i18n="servicesDescription6"> Project consulting </span>
+                  <span class="cross"></span>
+                </p>
+              </li>
+              <li class="services__item">
+                <p>
+                  <span data-js-i18n="servicesDescription7Part1"> Location analysis and </span>
+                  <br />
+                  <span data-js-i18n="servicesDescription7Part2"> feasibility studies </span>
+                  <span class="cross"></span>
+                </p>
+              </li>
+            </ul>
+            <div class="services__background">
+              <img
+                class="services__background-expression"
+                src="/images/services/1.webp"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="services__body services__body--background"></div>
+        </div>
+        <footer class="services__footer">
+          <a
+            class="services__footer-prompt"
+            data-js-i18n="servicesLink"
+            href="#building-examples-title"
+          >
+            Scroll to find out how our expertise can help you
+          </a>
+        </footer>
+      </section>
+      <section
+        class="main-page__building-examples building-examples"
+        aria-labelledby="building-examples-title"
+      >
+        <header class="building-examples__header">
+          <h2
+            id="building-examples-title"
+            class="building-examples__title"
+            data-js-i18n="buildingExamplesTitle"
+          >
+            Broad expertise based on decades of experience
+          </h2>
+          <p
+            class="building-examples__description"
+            data-js-i18n="buildingExamplesDescription"
+          >
+            Our services include all types of construction projects that you encounter.
+          </p>
+        </header>
+        <div class="building-examples__body">
+          <div
+            class="building-examples__slider swiper"
+            data-js-slider-examples
+          >
+            <div class="building-examples__slider-wrapper swiper-wrapper">
+              <a
+                class="building-examples__slider-slide swiper-slide example-card"
+                href="#"
+                style="
+                  --bgImageX1: url('../../images/building-examples/1-1.webp');
+                  --bgImageX2: url('../../images/building-examples/1.webp');
+                "
+              >
+                <div class="example-card__header">
+                  <span class="example-card__cross cross--bottom cross"></span>
+                </div>
+                <div class="example-card__body">
+                  <div class="example-card__description">
+                    <p data-js-i18n="buildingExamplesCard1">Civil engineering</p>
+                  </div>
+                </div>
+              </a>
+              <a
+                class="building-examples__slider-slide swiper-slide example-card"
+                href="#"
+                style="
+                  --bgImageX1: url('../../images/building-examples/1-1.webp');
+                  --bgImageX2: url('../../images/building-examples/1.webp');
+                "
+              >
+                <div class="example-card__header">
+                  <span class="example-card__cross cross--bottom cross"></span>
+                </div>
+                <div class="example-card__body">
+                  <div class="example-card__description">
+                    <p data-js-i18n="buildingExamplesCard2">Machine and building foundations</p>
+                  </div>
+                </div>
+              </a>
+              <a
+                class="building-examples__slider-slide swiper-slide example-card"
+                href="#"
+                style="
+                  --bgImageX1: url('../../images/building-examples/1-1.webp');
+                  --bgImageX2: url('../../images/building-examples/1.webp');
+                "
+              >
+                <div class="example-card__header">
+                  <span class="example-card__cross cross--bottom cross"></span>
+                </div>
+                <div class="example-card__body">
+                  <div class="example-card__description">
+                    <p data-js-i18n="buildingExamplesCard3">Silo and slipform construction</p>
+                  </div>
+                </div>
+              </a>
+              <a
+                class="building-examples__slider-slide swiper-slide example-card"
+                href="#"
+                style="
+                  --bgImageX1: url('../../images/building-examples/1-1.webp');
+                  --bgImageX2: url('../../images/building-examples/1.webp');
+                "
+              >
+                <div class="example-card__header">
+                  <span class="example-card__cross cross--bottom cross"></span>
+                </div>
+                <div class="example-card__body">
+                  <div class="example-card__description">
+                    <p data-js-i18n="buildingExamplesCard4">
+                      Assesments, building inspection, concrete maintenance and repair
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a
+                class="building-examples__slider-slide swiper-slide example-card"
+                href="#"
+                style="
+                  --bgImageX1: url('../../images/building-examples/1-1.webp');
+                  --bgImageX2: url('../../images/building-examples/1.webp');
+                "
+              >
+                <div class="example-card__header">
+                  <span class="example-card__cross cross--bottom cross"></span>
+                </div>
+                <div class="example-card__body">
+                  <div class="example-card__description">
+                    <p data-js-i18n="buildingExamplesCard5">
+                      International cement factory construction
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a
+                class="building-examples__slider-slide swiper-slide example-card"
+                href="#"
+                style="
+                  --bgImageX1: url('../../images/building-examples/1-1.webp');
+                  --bgImageX2: url('../../images/building-examples/1.webp');
+                "
+              >
+                <div class="example-card__header">
+                  <span class="example-card__cross cross--bottom cross"></span>
+                </div>
+                <div class="example-card__body">
+                  <div class="example-card__description">
+                    <p data-js-i18n="buildingExamplesCard6">Construction in ongoing operations</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="building-examples__slider-pagination swiper-pagination pagination visible-tablet-b"
+              data-js-slider-examples-pagination
+            ></div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="main-page__advantages advantages container"
+        aria-labelledby="advantages-title"
+      >
+        <header class="advantages__header">
+          <div class="advantages__header-group">
+            <h2
+              id="advantages-title"
+              class="advantages__title"
+              data-js-i18n="advantagesTitle"
+            >
+              Benefit from Decades of Life Cycle Know How
+            </h2>
+            <p
+              class="advantages__description"
+              data-js-i18n="advantagesDescription1"
+            >
+              Our decade-long permanent presence on cement plants helps us to design buildings today
+              that will be ready for whatever tomorrow brings. With our comprehensive planning
+              methodology and building life cycle experience we anticipate use changes, unexpected
+              utilisation and lifetime expositions early on during planning. This allows us to
+              design buildings that are flexible, long-lasting, and economically efficient.
+            </p>
+            <p
+              class="advantages__description hidden-tablet-l"
+              aria-hidden="true"
+              data-js-i18n="advantagesDescription2"
+            >
+              Our decade-long permanent presence on cement plants helps us to design buildings today
+              that will be ready for whatever tomorrow brings. With our comprehensive planning
+              methodology and building life cycle experience we anticipate use
+            </p>
+          </div>
+          <p
+            class="advantages__description hidden-tablet-l"
+            aria-hidden="true"
+            data-js-i18n="advantagesDescription3"
+          >
+            changes, unexpected utilisation and lifetime expositions early on during planning. This
+            allows us to design buildings that are flexible, long-lasting, and economically
+            efficient.
+          </p>
+        </header>
+        <div class="advantages__body">
+          <div
+            class="advantages__slider swiper"
+            data-js-slider-advantages
+          >
+            <div class="advantages__slider-wrapper swiper-wrapper">
+              <div class="advantages__slider-slide advantage-card swiper-slide">
+                <img
+                  class="advantage-card__image"
+                  src="/images/advantages/1.webp"
+                  srcset="/images/advantages/1.webp 2x, /images/advantages/1-1x.webp 1x"
+                  data-js-i18n-aria
+                  data-js-i18n-aria-alt="advantagesImageAlt1"
+                  alt="Construction work"
+                  loading="lazy"
+                />
+                <h3
+                  class="advantage-card__title"
+                  data-js-i18n="advantagesCardTitle1"
+                >
+                  Comprehensive planning methodology includes life-cycle know how
+                </h3>
+                <div class="advantage-card__description">
+                  <p data-js-i18n="advantagesCardDescription1">
+                    Our decade-long permanent presence on cement plants allows us to anticipate use
+                    changes, unexpected utilisation and lifetime expositions early on during
+                    planning. This allows us to design buildings that are flexible, long-lasting and
+                    economically efficient.
+                  </p>
+                </div>
+              </div>
+              <div class="advantages__slider-slide advantage-card swiper-slide">
+                <img
+                  class="advantage-card__image"
+                  src="/images/advantages/1.webp"
+                  srcset="/images/advantages/1.webp 2x, /images/advantages/1-1x.webp 1x"
+                  data-js-i18n-aria
+                  data-js-i18n-aria-alt="advantagesImageAlt1"
+                  alt="Construction work"
+                  loading="lazy"
+                />
+                <h3
+                  class="advantage-card__title"
+                  data-js-i18n="advantagesCardTitle2"
+                >
+                  Greenfield. Brownfield. Ongoing Operation.
+                </h3>
+                <div class="advantage-card__description">
+                  <p data-js-i18n="advantagesCardDescription1">
+                    Our decade-long permanent presence on cement plants allows us to anticipate use
+                    changes, unexpected utilisation and lifetime expositions early on during
+                    planning. This allows us to design buildings that are flexible, long-lasting and
+                    economically efficient.
+                  </p>
+                </div>
+              </div>
+              <div class="advantages__slider-slide advantage-card swiper-slide">
+                <img
+                  class="advantage-card__image"
+                  src="/images/advantages/1.webp"
+                  srcset="/images/advantages/1.webp 2x, /images/advantages/1-1x.webp 1x"
+                  data-js-i18n-aria
+                  data-js-i18n-aria-alt="advantagesImageAlt1"
+                  alt="Construction work"
+                  loading="lazy"
+                />
+                <h3
+                  class="advantage-card__title"
+                  data-js-i18n="advantagesCardTitle3"
+                >
+                  Reuse, rebuild, extend
+                </h3>
+                <div class="advantage-card__description">
+                  <p data-js-i18n="advantagesCardDescription1">
+                    Our decade-long permanent presence on cement plants allows us to anticipate use
+                    changes, unexpected utilisation and lifetime expositions early on during
+                    planning. This allows us to design buildings that are flexible, long-lasting and
+                    economically efficient.
+                  </p>
+                </div>
+              </div>
+              <div class="advantages__slider-slide advantage-card swiper-slide">
+                <img
+                  class="advantage-card__image"
+                  src="/images/advantages/1.webp"
+                  srcset="/images/advantages/1.webp 2x, /images/advantages/1-1x.webp 1x"
+                  data-js-i18n-aria
+                  data-js-i18n-aria-alt="advantagesImageAlt1"
+                  alt="Construction work"
+                  loading="lazy"
+                />
+                <h3
+                  class="advantage-card__title"
+                  data-js-i18n="advantagesCardTitle4"
+                >
+                  Renovate, refurbish, revamp
+                </h3>
+                <div class="advantage-card__description">
+                  <p data-js-i18n="advantagesCardDescription1">
+                    Our decade-long permanent presence on cement plants allows us to anticipate use
+                    changes, unexpected utilisation and lifetime expositions early on during
+                    planning. This allows us to design buildings that are flexible, long-lasting and
+                    economically efficient.
+                  </p>
+                </div>
+              </div>
+              <div class="advantages__slider-slide advantage-card swiper-slide">
+                <img
+                  class="advantage-card__image"
+                  src="/images/advantages/1.webp"
+                  srcset="/images/advantages/1.webp 2x, /images/advantages/1-1x.webp 1x"
+                  data-js-i18n-aria
+                  data-js-i18n-aria-alt="advantagesImageAlt1"
+                  alt="Construction work"
+                  loading="lazy"
+                />
+                <h3
+                  class="advantage-card__title"
+                  data-js-i18n="advantagesCardTitle5"
+                >
+                  Demolition
+                </h3>
+                <div class="advantage-card__description">
+                  <p data-js-i18n="advantagesCardDescription1">
+                    Our decade-long permanent presence on cement plants allows us to anticipate use
+                    changes, unexpected utilisation and lifetime expositions early on during
+                    planning. This allows us to design buildings that are flexible, long-lasting and
+                    economically efficient.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="advantages__slider-pagination swiper-pagination pagination"
+              data-js-slider-advantages-pagination
+            ></div>
+            <div class="advantages__slider-button-group">
+              <div
+                class="advantages__slider-button advantages__slider-button--prev swiper-button-prev slider-button slider-button--prev"
+                data-js-slider-advantages-button-prev
+              ></div>
+              <div
+                class="advantages__slider-button advantages__slider-button--next swiper-button-next slider-button slider-button--next"
+                data-js-slider-advantages-button-next
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="main-page__trusted-partners trusted-partners container"
+        aria-labelledby="trusted-partners-title"
+      >
+        <header class="trusted-partners__header">
+          <h2
+            id="trusted-partners-title"
+            class="trusted-partners__title"
+            data-js-i18n="trustedPartnersTitle"
+          >
+            Key Players in the cement industry trust us.
+          </h2>
+        </header>
+        <div class="trusted-partners__body">
+          <div
+            class="trusted-partners__slider swiper"
+            data-js-slider-partners
+          >
+            <div
+              class="trusted-partners__slider-wrapper swiper-wrapper"
+              data-js-slider-partners-wrapper
+            >
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/1.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/2.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/3.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/4.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/5.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/6.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/7.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/8.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/9.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/1.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/2.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/3.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/4.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/5.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/6.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/7.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/8.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/9.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/2.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/3.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/4.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/5.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/6.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+              <div class="trusted-partners__slider-slide swiper-slide">
+                <div class="partner-card dotted-border-right dotted-border-bottom">
+                  <img
+                    class="partner-card__image"
+                    src="/images/trusted-partners/7.svg"
+                    loading="lazy"
+                    data-js-i18n-aria
+                    data-js-i18n-aria-alt="partnerLogoAlt"
+                    alt="Partner company logo"
+                    width="144"
+                    height="47"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="trusted-partners__pagination pagination visible-tablet-b"
+              data-js-slider-partners-pagination
+            ></div>
+            <div
+              class="trusted-partners__button trusted-partners__button--prev swiper-button-prev hidden-tablet-b"
+              data-js-slider-partners-button-prev
+            ></div>
+            <div
+              class="trusted-partners__button trusted-partners__button--next swiper-button-next hidden-tablet-b"
+              data-js-slider-partners-button-next
+            ></div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="main-page__reviews reviews container dotted-border-right dotted-border-right--displaced"
+        aria-labelledby="reviews-title"
+      >
+        <header class="reviews__header">
+          <h2
+            id="reviews-title"
+            class="reviews__title"
+            data-js-i18n="reviewsTitle"
+          >
+            What clients say.
+          </h2>
+          <p
+            class="reviews__description"
+            data-js-i18n="reviewsDescription"
+          >
+            Aenean mauris duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus
+            aliquam.
+          </p>
+        </header>
+        <div
+          class="reviews__body"
+          data-js-slider-reviews
+        >
+          <div
+            class="reviews__slider swiper"
+            data-js-slider-reviews-main
+          >
+            <div
+              class="reviews__slider-wrapper swiper-wrapper"
+              data-js-slider-reviews-wrapper
+            >
+              <div class="reviews__slider-slide swiper-slide">
+                <div class="review-card">
+                  <div class="review-card__header">
+                    <img
+                      class="review-card__logo"
+                      src="/images/trusted-partners/4.svg"
+                      loading="lazy"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="reviewLogoAlt"
+                      alt="Partner company logo"
+                      width="202"
+                      height="63"
+                    />
+                  </div>
+                  <div class="review-card__body">
+                    <blockquote
+                      class="review-card__quote"
+                      cite="#jack-carty-info"
+                      data-js-i18n="reviewQuote1"
+                    >
+                      <p>
+                        “Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna.
+                        Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris
+                        duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus
+                        aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.”
+                      </p>
+                    </blockquote>
+                  </div>
+                  <div class="review-card__footer">
+                    <div class="review-card__author">
+                      <p
+                        id="jack-carty-info"
+                        class="review-card__author-name"
+                        data-js-i18n="reviewAuthor1"
+                      >
+                        Jack Carty
+                      </p>
+                      <p
+                        class="review-card__author-role"
+                        data-js-i18n="reviewRole1"
+                      >
+                        SEO
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__slider-slide swiper-slide">
+                <div class="review-card">
+                  <div class="review-card__header">
+                    <img
+                      class="review-card__logo"
+                      src="/images/trusted-partners/1.svg"
+                      loading="lazy"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="reviewLogoAlt"
+                      alt="Partner company logo"
+                      width="202"
+                      height="63"
+                    />
+                  </div>
+                  <div class="review-card__body">
+                    <blockquote
+                      class="review-card__quote"
+                      cite="#lou-carty-info"
+                      data-js-i18n="reviewQuote2"
+                    >
+                      <p>
+                        “Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna.
+                        Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris
+                        duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus
+                        aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.”
+                      </p>
+                    </blockquote>
+                  </div>
+                  <div class="review-card__footer">
+                    <div class="review-card__author">
+                      <p
+                        id="lou-carty-info"
+                        class="review-card__author-name"
+                        data-js-i18n="reviewAuthor2"
+                      >
+                        Lou Carty
+                      </p>
+                      <p
+                        class="review-card__author-role"
+                        data-js-i18n="reviewRole2"
+                      >
+                        SEO
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__slider-slide swiper-slide">
+                <div class="review-card">
+                  <div class="review-card__header">
+                    <img
+                      class="review-card__logo"
+                      src="/images/trusted-partners/2.svg"
+                      loading="lazy"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="reviewLogoAlt"
+                      alt="Partner company logo"
+                      width="202"
+                      height="63"
+                    />
+                  </div>
+                  <div class="review-card__body">
+                    <blockquote
+                      class="review-card__quote"
+                      cite="#nick-carty-info"
+                      data-js-i18n="reviewQuote3"
+                    >
+                      <p>
+                        “Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna.
+                        Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris
+                        duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus
+                        aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.”
+                      </p>
+                    </blockquote>
+                  </div>
+                  <div class="review-card__footer">
+                    <div class="review-card__author">
+                      <p
+                        id="nick-carty-info"
+                        class="review-card__author-name"
+                        data-js-i18n="reviewAuthor3"
+                      >
+                        Nick Carty
+                      </p>
+                      <p
+                        class="review-card__author-role"
+                        data-js-i18n="reviewRole3"
+                      >
+                        SEO
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__slider-slide swiper-slide">
+                <div class="review-card">
+                  <div class="review-card__header">
+                    <img
+                      class="review-card__logo"
+                      src="/images/trusted-partners/3.svg"
+                      loading="lazy"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="reviewLogoAlt"
+                      alt="Partner company logo"
+                      width="202"
+                      height="63"
+                    />
+                  </div>
+                  <div class="review-card__body">
+                    <blockquote
+                      class="review-card__quote"
+                      cite="#mila-carty-info"
+                      data-js-i18n="reviewQuote4"
+                    >
+                      <p>
+                        “Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna.
+                        Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris
+                        duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus
+                        aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.”
+                      </p>
+                    </blockquote>
+                  </div>
+                  <div class="review-card__footer">
+                    <div class="review-card__author">
+                      <p
+                        id="mila-carty-info"
+                        class="review-card__author-name"
+                        data-js-i18n="reviewAuthor4"
+                      >
+                        Mila Carty
+                      </p>
+                      <p
+                        class="review-card__author-role"
+                        data-js-i18n="reviewRole4"
+                      >
+                        SEO
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__slider-slide swiper-slide">
+                <div class="review-card">
+                  <div class="review-card__header">
+                    <img
+                      class="review-card__logo"
+                      src="/images/trusted-partners/5.svg"
+                      loading="lazy"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="reviewLogoAlt"
+                      alt="Partner company logo"
+                      width="202"
+                      height="63"
+                    />
+                  </div>
+                  <div class="review-card__body">
+                    <blockquote
+                      class="review-card__quote"
+                      cite="#kolya-carty-info"
+                      data-js-i18n="reviewQuote5"
+                    >
+                      <p>
+                        “Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna.
+                        Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris
+                        duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus
+                        aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.”
+                      </p>
+                    </blockquote>
+                  </div>
+                  <div class="review-card__footer">
+                    <div class="review-card__author">
+                      <p
+                        id="kolya-carty-info"
+                        class="review-card__author-name"
+                        data-js-i18n="reviewAuthor5"
+                      >
+                        Kolya Carty
+                      </p>
+                      <p
+                        class="review-card__author-role"
+                        data-js-i18n="reviewRole5"
+                      >
+                        SEO
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="reviews__pagination pagination"
+            data-js-slider-reviews-pagination
+          ></div>
+          <div class="reviews__slider-button-group hidden-tablet-b">
+            <div
+              class="reviews__button reviews__button--prev swiper-button-prev slider-button slider-button--next"
+              data-js-slider-reviews-button-prev
+            ></div>
+            <div
+              class="reviews__button reviews__button--next swiper-button-next slider-button slider-button--prev"
+              data-js-slider-reviews-button-next
+            ></div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="main-page__requirements requirements container"
+        aria-labelledby="requirements-title"
+      >
+        <header class="requirements__header">
+          <h2
+            id="requirements-title"
+            class="requirements__title"
+            data-js-i18n="requirementsTitle"
+          >
+            Holistic. Agile. Reliable
+          </h2>
+          <p
+            class="requirements__subtitle"
+            data-js-i18n="requirementsSubtitle"
+          >
+            With this triad we line up to support you to realize your projects successfully.
+          </p>
+          <div class="requirements__description-group">
+            <p
+              class="requirements__description"
+              data-js-i18n="requirementsDescription1"
+            >
+              Today's construction projects are notable for the diversity of their requirements.
+              While you want your buildings to be safe, economical, and durable, they primarily
+              serve your operations. Our deep industry knowledge helps to optimally incorporate the
+              variety of usage requirements of the cement production processes into civil design.
+            </p>
+            <p
+              class="requirements__description"
+              data-js-i18n="requirementsDescription2"
+            >
+              We constantly achieve client success by following these three core values for all
+              projects our clients trust us with.
+            </p>
+            <p
+              class="requirements__description hidden-desktop-l"
+              aria-hidden="true"
+              data-js-i18n="requirementsDescription3"
+            >
+              Today's construction projects are notable for the diversity of their requirements.
+              While you want your buildings to be safe, economical, and durable, they primarily
+              serve your operations. Our deep industry knowledge helps to optimally incorporate the
+              variety of usage requirements of the cement
+            </p>
+            <p
+              class="requirements__description hidden-desktop-l"
+              aria-hidden="true"
+              data-js-i18n="requirementsDescription4"
+            >
+              production processes into civil design.
+              <br />
+              We constantly achieve client success by following these three core values for all
+              projects our clients trust us with.
+            </p>
+          </div>
+        </header>
+        <div class="requirements__body">
+          <ul class="requirements__list">
+            <li class="requirements__item">
+              <h3
+                class="requirements__item-title"
+                data-js-i18n="requirementsItemTitle1"
+              >
+                Holistic planning
+              </h3>
+              <div class="requirements__item-description">
+                <p data-js-i18n="requirementsItemDescription1">
+                  Through continuous consideration of all circumstances, we create futureproof
+                  buildings and frictionless construction workflows. Systematic implementation of
+                  this holistic approach helps us to keep the bird's-eye view over all interfaces.
+                  We are proactively making sure that all included parties can focus on working
+                  towards the optimal project result.
+                </p>
+              </div>
+            </li>
+            <li class="requirements__item">
+              <h3
+                class="requirements__item-title"
+                data-js-i18n="requirementsItemTitle2"
+              >
+                Agile acting
+              </h3>
+              <div class="requirements__item-description">
+                <p data-js-i18n="requirementsItemDescription2">
+                  Our team can put results down on paper rapidly. In a world that is increasingly
+                  characterized by changing and adapting to uncertain circumstances, we can flexibly
+                  execute on multiple iterations of the project in close consultation with the
+                  client. This allows us to cater to your construction needs until the last phases
+                  of planning.
+                </p>
+              </div>
+            </li>
+            <li class="requirements__item">
+              <h3
+                class="requirements__item-title"
+                data-js-i18n="requirementsItemTitle3"
+              >
+                Reliable realisation.
+              </h3>
+              <div class="requirements__item-description">
+                <p data-js-i18n="requirementsItemDescription3">
+                  We prioritize project success over everything. Based on our decades of experience
+                  we have developed the highest quality standards and demonstrate with every new
+                  project our commitment to meeting and exceeding client expectations.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section
+        class="main-page__team team container"
+        aria-labelledby="team-title"
+      >
+        <header class="team__header">
+          <h2
+            id="team-title"
+            class="team__title"
+            data-js-i18n="teamTitle"
+          >
+            Meet the Team
+          </h2>
+          <p
+            class="team__description"
+            data-js-i18n="teamDescription"
+          >
+            These are the experts that turn ideas into reality
+          </p>
+        </header>
+        <div class="team__body">
+          <section
+            class="team__group team__group--big"
+            aria-labelledby="team-leadership-title"
+          >
+            <h3
+              id="team-leadership-title"
+              class="team__group-title"
+              data-js-i18n="teamLeadershipTitle"
+            >
+              Leadership Team
+            </h3>
+            <ul
+              class="team__group-list team__group-list--with-big-card dotted-border-bottom dotted-border-bottom--alt"
+            >
+              <li class="team__group-item">
+                <article class="team-card team-card--big">
+                  <header class="team-card__header">
+                    <h4
+                      class="team-card__name"
+                      data-js-i18n="teamMember1Name"
+                    >
+                      Tim-Nicolas Mollenhauer
+                    </h4>
+                    <p
+                      class="team-card__role"
+                      data-js-i18n="teamMember1Role"
+                    >
+                      CEO
+                    </p>
+                  </header>
+                  <div class="team-card__body">
+                    <div class="team-card__description">
+                      <p data-js-i18n="teamMember1Description">
+                        Viverra in turpis vitae tincidunt. Odio nunc netus consectetur libero duis.
+                        Est quis vitae, sed egestas vehicula.
+                      </p>
+                    </div>
+                  </div>
+                  <footer class="team-card__footer">
+                    <ul class="team-card__soc1al-list">
+                      <li class="team-card__soc1al-item">
+                        <a
+                          class="team-card__soc1al-link"
+                          href="#"
+                          data-js-i18n-aria
+                          data-js-i18n-aria-label="socialLinkedinAriaLabel"
+                          data-js-i18n-title="socialLinkedinTitle"
+                          aria-label="LinkedIn"
+                          title="LinkedIn"
+                        >
+                          <img
+                            class="team-card__soc1al-link-image"
+                            src="/images/team/linkedin.svg"
+                            width="20"
+                            height="21"
+                            data-js-i18n-aria
+                            data-js-i18n-aria-alt="socialLinkedinAlt"
+                            alt="LinkedIn"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </footer>
+                  <div class="team-card__image-container">
+                    <img
+                      class="team-card__image"
+                      width="287"
+                      height="345"
+                      src="/images/team/2.webp"
+                      srcset="/images/team/2-1x.webp 1x, /images/team/2.webp 2x"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="teamMember1Alt"
+                      alt="Tim-Nicolas Mollenhauer"
+                    />
+                  </div>
+                </article>
+              </li>
+              <li class="team__group-item">
+                <article class="team-card team-card--big team-card--big-alt">
+                  <header class="team-card__header">
+                    <h4
+                      class="team-card__name"
+                      data-js-i18n="teamMember2Name"
+                    >
+                      Klaus-Dieter Mollenhauer
+                    </h4>
+                    <p
+                      class="team-card__role"
+                      data-js-i18n="teamMember2Role"
+                    >
+                      Creative Director
+                    </p>
+                  </header>
+                  <div class="team-card__body">
+                    <div class="team-card__description">
+                      <p data-js-i18n="teamMember2Description">
+                        Duis aenean ultricies ullamcorper neque cras vel. Quam sem turpis est morbi
+                        nunc odio feugiat pellentesque. Eget risus lectus donec tempus cras. Amet
+                        amet, auctor habitasse tristique pellentesque id velit.
+                      </p>
+                    </div>
+                  </div>
+                  <footer class="team-card__footer">
+                    <ul class="team-card__soc1al-list">
+                      <li class="team-card__soc1al-item">
+                        <a
+                          class="team-card__soc1al-link"
+                          href="#"
+                          data-js-i18n-aria
+                          data-js-i18n-aria-label="socialLinkedinAriaLabel"
+                          data-js-i18n-title="socialLinkedinTitle"
+                          aria-label="LinkedIn"
+                          title="LinkedIn"
+                        >
+                          <img
+                            class="team-card__soc1al-link-image"
+                            src="/images/team/linkedin.svg"
+                            width="20"
+                            height="21"
+                            data-js-i18n-aria
+                            data-js-i18n-aria-alt="socialLinkedinAlt"
+                            alt="LinkedIn"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </footer>
+                  <div class="team-card__image-container">
+                    <img
+                      class="team-card__image"
+                      width="287"
+                      height="345"
+                      src="/images/team/1.webp"
+                      srcset="/images/team/1-1x.webp 1x, /images/team/1.webp 2x"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="teamMember2Alt"
+                      alt="Klaus-Dieter Mollenhauer"
+                    />
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </section>
+          <section
+            class="team__group"
+            aria-labelledby="team-engineers-title"
+          >
+            <h3
+              id="team-engineers-title"
+              class="team__group-title"
+              data-js-i18n="teamEngineersTitle"
+            >
+              Engineers
+            </h3>
+            <ul class="team__group-list dotted-border-bottom dotted-border-bottom--alt-full">
+              <li class="team__group-item">
+                <article class="team-card">
+                  <div class="team-card__image-container">
+                    <img
+                      class="team-card__image"
+                      width="215"
+                      height="218"
+                      src="/images/team/3.webp"
+                      srcset="/images/team/3-1x.webp 1x, /images/team/3.webp 2x"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="teamMember3Alt"
+                      alt="Bernhard Meyer"
+                    />
+                  </div>
+                  <h4
+                    class="team-card__name"
+                    data-js-i18n="teamMember3Name"
+                  >
+                    Bernhard Meyer
+                  </h4>
+                  <p
+                    class="team-card__role"
+                    data-js-i18n="teamMember3Role"
+                  >
+                    Senior Steel Structures Engineer
+                  </p>
+                </article>
+              </li>
+              <li class="team__group-item">
+                <article class="team-card">
+                  <div class="team-card__image-container">
+                    <img
+                      class="team-card__image"
+                      width="215"
+                      height="218"
+                      src="/images/team/3.webp"
+                      srcset="/images/team/3-1x.webp 1x, /images/team/3.webp 2x"
+                      data-js-i18n-aria-alt="teamMemberDefaultAlt"
+                      data-js-i18n-aria
+                      alt="Team member"
+                    />
+                  </div>
+                  <h4
+                    class="team-card__name"
+                    data-js-i18n="teamMemberDefaultName"
+                  >
+                    Tim-Nicolas Mollenhauer
+                  </h4>
+                  <p
+                    class="team-card__role"
+                    data-js-i18n="teamMemberDefaultRole"
+                  >
+                    Position
+                  </p>
+                </article>
+              </li>
+              <li class="team__group-item">
+                <article class="team-card">
+                  <div class="team-card__image-container">
+                    <img
+                      class="team-card__image"
+                      width="215"
+                      height="218"
+                      src="/images/team/3.webp"
+                      srcset="/images/team/3-1x.webp 1x, /images/team/3.webp 2x"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="teamMemberDefaultAlt"
+                      alt="Team member"
+                    />
+                  </div>
+                  <h4
+                    class="team-card__name"
+                    data-js-i18n="teamMemberDefaultName"
+                  >
+                    Tim-Nicolas Mollenhauer
+                  </h4>
+                  <p
+                    class="team-card__role"
+                    data-js-i18n="teamMemberDefaultRole"
+                  >
+                    Position
+                  </p>
+                </article>
+              </li>
+              <li class="team__group-item">
+                <article class="team-card">
+                  <div class="team-card__image-container">
+                    <img
+                      class="team-card__image"
+                      width="215"
+                      height="218"
+                      src="/images/team/3.webp"
+                      srcset="/images/team/3-1x.webp 1x, /images/team/3.webp 2x"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="teamMemberDefaultAlt"
+                      alt="Team member"
+                    />
+                  </div>
+                  <h4
+                    class="team-card__name"
+                    data-js-i18n="teamMemberDefaultName"
+                  >
+                    Tim-Nicolas Mollenhauer
+                  </h4>
+                  <p
+                    class="team-card__role"
+                    data-js-i18n="teamMemberDefaultRole"
+                  >
+                    Position
+                  </p>
+                </article>
+              </li>
+              <li class="team__group-item">
+                <article class="team-card team-card--with-offer">
+                  <div class="team-card__image-container"></div>
+                  <div class="team-card__row-group">
+                    <h4
+                      class="team-card__name"
+                      data-js-i18n="teamMemberYouName"
+                    >
+                      You?
+                    </h4>
+                    <a
+                      class="team-card__link"
+                      href="#"
+                    >
+                      <span data-js-i18n="teamApplyNowPart1">Apply</span>
+                      <span>&nbsp</span>
+                      <span
+                        class="hidden-tablet-b"
+                        teamApplyNowPart2
+                        >Now</span
+                      >
+                    </a>
+                  </div>
+                  <p
+                    class="team-card__role"
+                    data-js-i18n="teamMemberYouRole"
+                  >
+                    Senior Engineer Concrete
+                  </p>
+                </article>
+              </li>
+            </ul>
+          </section>
+          <section
+            class="team__group"
+            aria-labelledby="team-technical-title"
+          >
+            <h3
+              id="team-technical-title"
+              class="team__group-title"
+              data-js-i18n="teamTechnicalTitle"
+            >
+              Technical stuff
+            </h3>
+            <ul class="team__group-list dotted-border-bottom dotted-border-bottom--alt-full">
+              <li class="team__group-item">
+                <article class="team-card">
+                  <div class="team-card__image-container">
+                    <img
+                      class="team-card__image"
+                      width="215"
+                      height="218"
+                      src="/images/team/3.webp"
+                      srcset="/images/team/3-1x.webp 1x, /images/team/3.webp 2x"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="teamMemberDefaultAlt"
+                      alt="Team member"
+                    />
+                  </div>
+                  <h4
+                    class="team-card__name"
+                    data-js-i18n="teamMemberDefaultName"
+                  >
+                    Tim-Nicolas Mollenhauer
+                  </h4>
+                  <p
+                    class="team-card__role"
+                    data-js-i18n="teamMemberDefaultRole"
+                  >
+                    Position
+                  </p>
+                </article>
+              </li>
+              <li class="team__group-item">
+                <article class="team-card">
+                  <div class="team-card__image-container">
+                    <img
+                      class="team-card__image"
+                      width="215"
+                      height="218"
+                      src="/images/team/3.webp"
+                      srcset="/images/team/3-1x.webp 1x, /images/team/3.webp 2x"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="teamMemberDefaultAlt"
+                      alt="Team member"
+                    />
+                  </div>
+                  <h4
+                    class="team-card__name"
+                    data-js-i18n="teamMemberDefaultName"
+                  >
+                    Tim-Nicolas Mollenhauer
+                  </h4>
+                  <p
+                    class="team-card__role"
+                    data-js-i18n="teamMemberReinforcementRole"
+                  >
+                    Reinforcement Technician
+                  </p>
+                </article>
+              </li>
+              <li class="team__group-item">
+                <article class="team-card">
+                  <div class="team-card__image-container">
+                    <img
+                      class="team-card__image"
+                      width="215"
+                      height="218"
+                      src="/images/team/3.webp"
+                      srcset="/images/team/3-1x.webp 1x, /images/team/3.webp 2x"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="teamMemberDefaultAlt"
+                      alt="Team member"
+                    />
+                  </div>
+                  <h4
+                    class="team-card__name"
+                    data-js-i18n="teamMemberDefaultName"
+                  >
+                    Tim-Nicolas Mollenhauer
+                  </h4>
+                  <p
+                    class="team-card__role"
+                    data-js-i18n="teamMemberDefaultRole"
+                  >
+                    Position
+                  </p>
+                </article>
+              </li>
+              <li class="team__group-item">
+                <article class="team-card">
+                  <div class="team-card__image-container">
+                    <img
+                      class="team-card__image"
+                      width="215"
+                      height="218"
+                      src="/images/team/3.webp"
+                      srcset="/images/team/3-1x.webp 1x, /images/team/3.webp 2x"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="teamMemberDefaultAlt"
+                      alt="Team member"
+                    />
+                  </div>
+                  <h4
+                    class="team-card__name"
+                    data-js-i18n="teamMemberDefaultName"
+                  >
+                    Tim-Nicolas Mollenhauer
+                  </h4>
+                  <p
+                    class="team-card__role"
+                    data-js-i18n="teamMemberDefaultRole"
+                  >
+                    Position
+                  </p>
+                </article>
+              </li>
+              <li class="team__group-item">
+                <article class="team-card">
+                  <div class="team-card__image-container">
+                    <img
+                      class="team-card__image"
+                      width="215"
+                      height="218"
+                      src="/images/team/3.webp"
+                      srcset="/images/team/3-1x.webp 1x, /images/team/3.webp 2x"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="teamMemberDefaultAlt"
+                      alt="Team member"
+                    />
+                  </div>
+                  <h4
+                    class="team-card__name"
+                    data-js-i18n="teamMemberDefaultName"
+                  >
+                    Tim-Nicolas Mollenhauer
+                  </h4>
+                  <p
+                    class="team-card__role"
+                    data-js-i18n="teamMemberDefaultRole"
+                  >
+                    Position
+                  </p>
+                </article>
+              </li>
+              <li class="team__group-item">
+                <article class="team-card">
+                  <div class="team-card__image-container">
+                    <img
+                      class="team-card__image"
+                      width="215"
+                      height="218"
+                      src="/images/team/3.webp"
+                      srcset="/images/team/3-1x.webp 1x, /images/team/3.webp 2x"
+                      data-js-i18n-aria
+                      data-js-i18n-aria-alt="teamMemberDefaultAlt"
+                      alt="Team member"
+                    />
+                  </div>
+                  <h4
+                    class="team-card__name"
+                    data-js-i18n="teamMemberDefaultName"
+                  >
+                    Tim-Nicolas Mollenhauer
+                  </h4>
+                  <p
+                    class="team-card__role"
+                    data-js-i18n="teamMemberDefaultRole"
+                  >
+                    Position
+                  </p>
+                </article>
+              </li>
+            </ul>
+          </section>
+          <div class="team__row-group">
+            <section
+              class="team__group team__group--fixed-size-alt"
+              aria-labelledby="team-trainees-title"
+            >
+              <h3
+                id="team-trainees-title"
+                class="team__group-title"
+                data-js-i18n="teamTraineesTitle"
+              >
+                Engineering Trainees
+              </h3>
+              <ul class="team__group-list dotted-border-bottom dotted-border-bottom--alt-full">
+                <li class="team__group-item">
+                  <article class="team-card">
+                    <div class="team-card__image-container">
+                      <img
+                        class="team-card__image"
+                        width="215"
+                        height="218"
+                        src="/images/team/3.webp"
+                        srcset="/images/team/3-1x.webp 1x, /images/team/3.webp 2x"
+                        data-js-i18n-aria
+                        data-js-i18n-aria-alt="teamMemberDefaultAlt"
+                        alt="Team member"
+                      />
+                    </div>
+                    <h4
+                      class="team-card__name"
+                      data-js-i18n="teamMemberDefaultName"
+                    >
+                      Tim-Nicolas Mollenhauer
+                    </h4>
+                    <p
+                      class="team-card__role"
+                      data-js-i18n="teamMemberDefaultRole"
+                    >
+                      Position
+                    </p>
+                  </article>
+                </li>
+                <li class="team__group-item">
+                  <article class="team-card">
+                    <div class="team-card__image-container">
+                      <img
+                        class="team-card__image"
+                        width="215"
+                        height="218"
+                        src="/images/team/3.webp"
+                        srcset="/images/team/3-1x.webp 1x, /images/team/3.webp 2x"
+                        data-js-i18n-aria
+                        data-js-i18n-aria-alt="teamMemberDefaultAlt"
+                        alt="Team member"
+                      />
+                    </div>
+                    <h4
+                      class="team-card__name"
+                      data-js-i18n="teamMemberDefaultName"
+                    >
+                      Tim-Nicolas Mollenhauer
+                    </h4>
+                    <p
+                      class="team-card__role"
+                      data-js-i18n="teamMemberReinforcementRole"
+                    >
+                      Reinforcement Technician
+                    </p>
+                  </article>
+                </li>
+              </ul>
+            </section>
+            <section
+              class="team__group team__group--fixed-size"
+              aria-labelledby="team-other-title"
+            >
+              <h3
+                id="team-other-title"
+                class="team__group-title"
+                data-js-i18n="teamOtherTitle"
+              >
+                Other Team Members
+              </h3>
+              <ul
+                class="team__group-list dotted-border-bottom dotted-border-bottom--alt-full dotted-border-bottom--hidden-tablet"
+              >
+                <li class="team__group-item">
+                  <article class="team-card team-card--little-mobile-b">
+                    <div class="team-card__image-container">
+                      <img
+                        class="team-card__image"
+                        width="215"
+                        height="218"
+                        src="/images/team/3.webp"
+                        srcset="/images/team/3-1x.webp 1x, /images/team/3.webp 2x"
+                        data-js-i18n-aria
+                        data-js-i18n-aria-alt="teamMemberDefaultAlt"
+                        alt="Team member"
+                      />
+                    </div>
+                    <h4
+                      class="team-card__name"
+                      data-js-i18n="teamMemberDefaultName"
+                    >
+                      Tim-Nicolas Mollenhauer
+                    </h4>
+                    <p
+                      class="team-card__role"
+                      data-js-i18n="teamMemberDefaultRole"
+                    >
+                      Position
+                    </p>
+                  </article>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+      <div class="main-page__background">
+        <div class="main-page__background-rect"></div>
+      </div>
+    </main>
+    <footer class="main-page__footer footer">
+      <section
+        class="footer__contacts footer-contacts"
+        aria-labelledby="footer-contacts-title"
+      >
+        <h2
+          id="footer-contacts-title"
+          class="visually-hidden"
+          data-js-i18n="footerContactsTitle"
+        >
+          Our contacts
+        </h2>
+        <div
+          class="footer-contacts__map"
+          data-js-map
+        >
+          <div class="footer-contacts__balloon">
+            <div class="footer-contacts__wrapper-logo">
+              <a
+                class="footer-contacts__logo"
+                href="#"
+                data-js-i18n-aria
+                data-js-i18n-aria-label="footerHomeAriaLabel"
+                aria-label="Home"
+              >
+                <img
+                  class="logo logo--little"
+                  src="/images/logo-little.svg"
+                  width="72"
+                  height="55"
+                  data-js-i18n-aria
+                  data-js-i18n-aria-alt="footerLogoAlt"
+                  alt="Company logo"
+                />
+              </a>
+            </div>
+            <div class="footer-contacts__wrapper-address">
+              <b
+                class="footer-contacts__wrapper-address-title"
+                data-js-i18n="footerContactsTitleText"
+              >
+                Contacts:
+              </b>
+              <address class="footer-contacts__address">
+                <div
+                  class="footer-contacts__place"
+                  data-js-i18n="footerAddress"
+                >
+                  Erwitter Str. 40 <br class="hidden-tablet-b" />
+                  59590 Geseke <br class="hidden-tablet-b" />
+                  GERMANY <br class="hidden-tablet-b" />
+                </div>
+                <ul class="footer-contacts__phone-list">
+                  <li class="footer-contacts__phone-item">
+                    <a
+                      class="footer-contacts__phone-link"
+                      href="tel:+492942"
+                    >
+                      +49 29 42
+                    </a>
+                  </li>
+                  <li class="footer-contacts__phone-item">
+                    <a
+                      class="footer-contacts__phone-link"
+                      href="tel:+978371"
+                    >
+                      97 83 71
+                    </a>
+                  </li>
+                </ul>
+                <a
+                  class="footer-contacts__mail-link"
+                  href="mailto:info@m-bp.de"
+                  >info@m-bp.de</a
+                >
+              </address>
+            </div>
+            <div class="footer-contacts__wrapper-soc1al">
+              <b
+                class="footer-contacts__wrapper-soc1al-title"
+                data-js-i18n="footerSocialTitle"
+              >
+                Our Social Media:
+              </b>
+              <ul class="footer-contacts__soc1al-list">
+                <li class="footer-contacts__so1ial-item">
+                  <a
+                    href="#"
+                    class="footer-contacts__soc1al-link soc1al-link"
+                    aria-label="Instagram"
+                    title="Instagram"
+                  >
+                    Ig
+                  </a>
+                </li>
+                <li class="footer-contacts__so1ial-item">
+                  <a
+                    href="#"
+                    class="footer-contacts__soc1al-link soc1al-link"
+                    aria-label="Facebook"
+                    title="Facebook"
+                  >
+                    Fb
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="footer__meta">
+        <ul class="footer__legal-list">
+          <li class="footer__legal-item">
+            <a
+              class="footer__legal-link"
+              href="#"
+              data-js-i18n="footerImprint"
+            >
+              Imprint
+            </a>
+          </li>
+          <li class="footer__legal-item">
+            <a
+              class="footer__legal-link"
+              href="#"
+              data-js-i18n="footerDataPrivacy"
+            >
+              Data Privacy
+            </a>
+          </li>
+        </ul>
+        <p
+          class="footer__copyright"
+          data-js-i18n="footerCopyright"
+        >
+          Copyright : mbp | Mollenhauer Beraten & Planen GmbH
+        </p>
+        <p
+          class="footer__description"
+          data-js-i18n="footerDescription"
+        >
+          Consulting & Structural Engineering Design
+        </p>
+      </div>
+    </footer>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="/styles/main.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=afea89c2-c55b-4d59-8914-8e93e7c45a89&lang=en_US"></script>
+    <script
+      src="/scripts/main.js"
+      type="module"
+    ></script>
+  </body>
+</html>

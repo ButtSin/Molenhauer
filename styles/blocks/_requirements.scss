@@ -1,0 +1,208 @@
+@use '../helpers/index' as *;
+
+.requirements {
+  --requirementsFirstColWidth: #{fluid(298, 238, $desktop, $tablet)};
+  --requirementsFirstColGap: #{fluid(134, 15, $desktop, $tablet)};
+  --requirementsParagraphIndentation: #{rem(22)};
+  --requirementsDescriptionExtraSize: 0px;
+  --requirementsParagrathPaddingRight: #{fluid(0, 49, $tablet-l, $mobile)};
+
+  @include desktop-l {
+    --requirementsDescriptionExtraSize: #{fluid(90, 0, $desktop-l, $tablet)};
+  }
+
+  @include mobile-b {
+    --requirementsParagraphIndentation: #{rem(18)};
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: var(--requirementsFirstColWidth) 1fr;
+    column-gap: var(--requirementsFirstColGap);
+    grid-template-areas:
+      'title title'
+      'subtitle description-group';
+
+    @include tablet-l {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    margin-bottom: fluid(24, 28, $tablet, $mobile);
+
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: var(--line-height-lg);
+    letter-spacing: var(--letter-spacing-md);
+    color: var(--color-dark-grey);
+
+    @include tablet {
+      font-size: rem(16);
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+
+    grid-area: subtitle;
+    padding-bottom: rem(60);
+    margin-bottom: fluid(0, 38, $tablet, $mobile);
+
+    font-weight: 400;
+    font-size: rem(32);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-xxxs);
+    color: var(--color-orange);
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      content: '';
+      width: rem(35);
+      height: rem(26);
+
+      background: url('../../images/arrow.svg') no-repeat left / contain;
+    }
+
+    @include tablet {
+      padding-bottom: rem(58);
+
+      font-size: rem(30);
+    }
+  }
+
+  &__description-group {
+    grid-area: description-group;
+    display: flex;
+    column-gap: rem(39);
+    padding-right: var(--requirementsParagrathPaddingRight);
+    padding-top: rem(2);
+
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: var(--line-height-xl);
+    letter-spacing: var(--letter-spacing-md);
+    color: #1a171b;
+
+    @include desktop-l {
+      flex-direction: column;
+      row-gap: var(--requirementsParagraphIndentation);
+    }
+
+    @include tablet {
+      font-size: rem(13);
+    }
+
+    .requirements__description:nth-child(1),
+    .requirements__description:nth-child(2) {
+      @include desktop-l-above {
+        @include visually-hidden;
+      }
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns:
+      calc(var(--requirementsFirstColWidth) + var(--requirementsFirstColGap))
+      1fr;
+    grid-template-areas: '. list';
+    padding-top: fluid(48, 35, $tablet, $mobile);
+
+    @include desktop-l {
+      display: block;
+    }
+  }
+
+  &__description {
+    max-width: rem(322);
+
+    @include desktop-l {
+      max-width: 100%;
+    }
+
+    br {
+      margin-bottom: var(--requirementsParagraphIndentation);
+    }
+  }
+
+  &__list {
+    grid-area: list;
+    display: flex;
+    column-gap: fluid(82, 52, $desktop, $desktop-l);
+
+    @include desktop-l {
+      column-gap: fluid(52, 17, $desktop-l, $tablet);
+      justify-content: space-between;
+    }
+
+    @include tablet-l {
+      flex-direction: column;
+      row-gap: rem(38);
+    }
+  }
+
+  &__item {
+    &:nth-of-type(2) {
+      .requirements__item-description {
+        width: calc(var(--requirementsDescriptionExtraSize) + fluid(275, 234, $desktop, $tablet));
+
+        @include tablet-l {
+          width: 100%;
+          padding-right: var(--requirementsParagrathPaddingRight);
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      .requirements__item-description {
+        width: calc(var(--requirementsDescriptionExtraSize) + fluid(267, 235, $desktop, $tablet));
+
+        @include tablet-l {
+          width: 100%;
+          padding-right: var(--requirementsParagrathPaddingRight);
+        }
+      }
+    }
+
+    &-title {
+      max-width: fluid(124, 220, $tablet, $mobile);
+      margin-bottom: rem(24);
+
+      font-weight: 900;
+      font-size: rem(28);
+      line-height: var(--line-height-md);
+      letter-spacing: -0.04em;
+      color: var(--color-dark-light);
+
+      @include tablet {
+        letter-spacing: -0.05em;
+        font-size: rem(26);
+      }
+    }
+
+    &-description {
+      width: calc(var(--requirementsDescriptionExtraSize) + fluid(285, 237, $desktop, $tablet));
+
+      font-weight: 400;
+      font-size: rem(16);
+      line-height: var(--line-height-xl);
+      letter-spacing: var(--letter-spacing-md);
+      color: var(--color-light-grey);
+
+      @include tablet-b {
+        font-size: rem(14);
+      }
+
+      @include tablet-l {
+        width: 100%;
+        padding-right: var(--requirementsParagrathPaddingRight);
+      }
+    }
+  }
+}

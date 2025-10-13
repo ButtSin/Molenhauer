@@ -1,0 +1,92 @@
+@use '../helpers/index' as *;
+
+.advantage-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    'image title'
+    'image description';
+  column-gap: rem(20);
+
+  @include tablet-l {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+      'image'
+      'title'
+      'description';
+    row-gap: fluid(20, 13, $tablet-l, $mobile);
+  }
+
+  &__image {
+    grid-area: image;
+    width: fluid(936, 492, $desktop, $tablet);
+    height: 100%;
+
+    object-fit: cover;
+
+    @include tablet-b {
+      padding-top: var(--paginationHeight);
+    }
+
+    @include tablet-l {
+      padding-top: 0;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    align-self: flex-end;
+    width: fluid(394, 238, $desktop, $tablet);
+    padding-top: fluid(252, 242, $desktop, $tablet-b);
+    font-weight: 700;
+    @include fluid-text(28, 24, $desktop, $tablet);
+    line-height: var(--line-height);
+    letter-spacing: -0.04em;
+    color: var(--color-dark);
+
+    @include tablet-b {
+      padding-top: calc(var(--paginationHeight) + rem(36));
+    }
+
+    @include tablet-l {
+      padding-top: 0;
+      width: 100%;
+    }
+
+    @include mobile {
+      width: var(--advantagesContentWidth);
+    }
+  }
+
+  &__description {
+    grid-area: description;
+    align-self: flex-start;
+    max-width: fluid(321, 238);
+    padding-block: fluid(50, 22, $tablet-b, $tablet) fluid(50, 0, $tablet-b, $tablet);
+
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: var(--line-height-lg);
+    letter-spacing: var(--letter-spacing-md);
+    color: var(--color-light-grey);
+
+    @include tablet-l {
+      max-width: none;
+      padding-block: fluid(22, 8, $tablet-l, $mobile) fluid(50, 73, $tablet-l, $mobile);
+    }
+
+    @include mobile {
+      width: var(--advantagesContentWidth);
+
+      font-size: rem(14);
+      line-height: 1.4;
+    }
+
+    p {
+      margin-top: rem(-4);
+    }
+  }
+}

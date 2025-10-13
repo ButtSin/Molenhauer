@@ -1,0 +1,131 @@
+@use '../helpers/index' as *;
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  padding-left: rem(49);
+  padding-top: rem(11);
+  margin: 0;
+  width: fluid(346, 326, $tablet);
+  height: 100vh;
+
+  color: var(--color-light);
+
+  border: 0;
+  background-color: rgba(255, 124, 64, 0.98);
+
+  @include hide;
+  overflow-y: auto;
+  will-change: translate, opacity;
+
+  transition-duration: var(--transition-duration);
+
+  &:modal {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &::backdrop {
+    opacity: 0;
+  }
+
+  &.is-active {
+    @include show;
+  }
+
+  &:focus-visible {
+    outline: none;
+    filter: brightness(85%);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: rem(66);
+  }
+
+  &__close-button {
+    margin-top: rem(-0.5);
+    margin-right: fluid(17.5, -9, $tablet);
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+  &__legal-info {
+    margin-block: fluid(52, 18, $tablet);
+
+    font-size: rem(16);
+    line-height: var(--line-height-lg-alt);
+    letter-spacing: var(--letter-spacing-md);
+
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child)::after {
+        translate: rem(-2.5) 0;
+
+        content: 'l';
+        margin-inline: rem(15.5);
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      min-height: rem(44);
+
+      outline: none;
+
+      @include hover(itself) {
+        color: var(--color-orange);
+      }
+
+      &:focus-visible {
+        color: var(--color-orange);
+      }
+    }
+  }
+
+  &__menu {
+    margin-bottom: rem(38);
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      max-height: 55vh;
+      padding-right: rem(10);
+
+      overflow-y: auto;
+    }
+
+    &-link {
+      min-height: rem(44);
+
+      font-weight: 300;
+      font-size: rem(28);
+      line-height: inherit;
+      letter-spacing: var(--letter-spacing-sm);
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+
+  &__contact-link {
+    margin-top: rem(-6);
+    margin-left: rem(3);
+  }
+}

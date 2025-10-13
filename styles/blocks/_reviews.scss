@@ -1,0 +1,176 @@
+@use '../helpers/index' as *;
+
+.reviews {
+  --reviewsMarginBottom: #{rem(33)};
+  --reviewsBodyPaddingLeft: #{fluid(73, 30)};
+  --reviewCardWidth: #{fluid(579, 429, $desktop, $tablet-l)};
+  --reviewsSliderWidth: #{fluid(578, 428, $desktop, $tablet-l)};
+  --reviewsSliderMarginRight: calc(
+    (var(--reviewCardWidth) + (var(--reviewsBodyPaddingLeft)) - var(--reviewsSliderWidth))
+  );
+
+  position: relative;
+
+  display: grid;
+  grid-template-columns: fluid(328, 210) var(--reviewsSliderWidth) 1fr;
+  grid-template-areas: 'header slider';
+  column-gap: fluid(104, 15, $desktop, $tablet-l);
+
+  @include tablet-b {
+    grid-template-columns: fluid(328, 210) 1fr;
+  }
+
+  @include tablet-l {
+    --reviewCardWidth: #{fluid(579, 308, $tablet-l, $mobile)};
+
+    grid-template-areas:
+      'header'
+      'slider';
+    column-gap: 0;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: fluid(42, 32, $tablet-l, $mobile);
+  }
+
+  @media (max-width: rem(386)) {
+    --reviewCardWidth: #{rem(298)};
+  }
+
+  &__header {
+    grid-area: header;
+
+    @include tablet-l {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @include mobile {
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(24);
+
+    font-weight: 700;
+    @include fluid-text(32, 26);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-xxxs);
+    color: var(--color-dark);
+
+    @include mobile {
+      letter-spacing: -0.04em;
+    }
+  }
+
+  &__description {
+    max-width: fluid(290, 210, $desktop, $tablet-l);
+
+    font-weight: 400;
+    @include fluid-text(16, 13);
+    line-height: var(--line-height-lg);
+    letter-spacing: var(--letter-spacing-md);
+    color: var(--color-light-grey);
+
+    @include tablet-l {
+      max-width: 100%;
+
+      font-family: 'Mulish', sans-serif;
+    }
+
+    @include mobile {
+      max-width: rem(323);
+
+      letter-spacing: var(--letter-spacing-md);
+    }
+  }
+
+  &__body {
+    position: relative;
+
+    grid-area: slider;
+    width: var(--reviewsSliderWidth);
+    padding-left: var(--reviewsBodyPaddingLeft);
+    padding-block: fluid(123, 24) fluid(110, 24);
+
+    background:
+      url('/images/reviews/border-top.svg') top left/100% auto no-repeat,
+      url('/images/reviews//border-bottom.svg') bottom left/100% auto no-repeat;
+
+    @include tablet-b {
+      justify-self: flex-end;
+      margin-right: var(--reviewsSliderMarginRight);
+    }
+
+    @include tablet-l {
+      --reviewsBodyPaddingLeft: #{fluid(73, 44, $tablet-l, $mobile)};
+      --reviewsSliderWidth: #{fluid(578, 357, $tablet-l, $mobile)};
+      --reviewsSliderMarginRight: calc(
+        (var(--reviewCardWidth) + (var(--reviewsBodyPaddingLeft)) - var(--reviewsSliderWidth))
+      );
+
+      padding-block: fluid(123, 77, $tablet-l, $mobile) fluid(110, 64, $tablet-l, $mobile);
+      margin-bottom: var(--reviewsMarginBottom);
+      justify-self: auto;
+    }
+
+    @include mobile {
+      --reviewsSliderWidth: 100%;
+
+      margin-right: 0;
+    }
+  }
+
+  &__slider {
+    width: var(--reviewCardWidth);
+    margin-inline: 0;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &-button-group {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      translate: calc(100% + fluid(72, 14, $desktop, $tablet-b)) 0;
+
+      display: flex;
+      width: rem(142);
+      height: rem(71);
+    }
+  }
+
+  &__button {
+    translate: 0 rem(22);
+
+    &--prev {
+      top: 0;
+      left: 0;
+    }
+
+    &--next {
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    left: auto !important;
+    right: calc(100% + calc(fluid(73, 20, $desktop, $tablet-l)));
+    bottom: fluid(-4, 0, $desktop, $tablet-l) !important;
+
+    width: fit-content !important;
+
+    @include tablet-l {
+      left: calc(50% + var(--reviewsSliderMarginRight) / 2) !important;
+      bottom: calc(var(--reviewsMarginBottom) * -1) !important;
+      translate: -50% 0;
+    }
+  }
+}

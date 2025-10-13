@@ -1,0 +1,68 @@
+@use 'helpers' as *;
+
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: var(--font-family-base);
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: 1.28;
+  color: var(--color-dark);
+
+  background-color: var(--color-violet);
+}
+
+main {
+  flex-grow: 1;
+}
+
+:where(a, button, label, input, textarea, select, svg *) {
+  outline-color: var(--outline-color);
+  outline-offset: 0;
+
+  transition-duration: var(--transition-duration);
+}
+
+:is(a, ul, button, input, textarea, summary, svg *):focus-visible {
+  outline: var(--outline);
+}
+
+a {
+  color: inherit;
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+h1,
+.h1 {
+  @include fluid-text(64, 38);
+  line-height: var(--line-height-big);
+  letter-spacing: var(--letter-spacing-very-little);
+  color: var(--color-light-alt);
+}
+
+h2,
+.h2 {
+  @include fluid-text(40, 28);
+  font-weight: 700;
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing-very-little);
+}
+
+h3,
+.h3 {
+  @include fluid-text(32, 26);
+  font-weight: 300;
+  color: var(--color-dark-alt);
+}

@@ -1,0 +1,43 @@
+@use '../helpers/index' as *;
+
+.slider-button {
+  @include square(rem(71));
+
+  color: var(--color-light);
+
+  transition-duration: var(--transition-duration);
+
+  &:focus-visible {
+    outline: var(--outline);
+    outline-offset: calc(var(--outline-size) * -1);
+  }
+
+  &::after {
+    font-size: rem(16);
+    font-weight: 900;
+  }
+
+  &--prev {
+    background: var(--color-blue);
+
+    @include hover(itself) {
+      background: #1d4a99;
+    }
+
+    &:focus-visible {
+      background: #1d4a99;
+    }
+  }
+
+  &--next {
+    background: var(--color-orange);
+
+    @include hover(itself) {
+      background: #ba4e1d;
+    }
+
+    &:focus-visible {
+      background: #ba4e1d;
+    }
+  }
+}

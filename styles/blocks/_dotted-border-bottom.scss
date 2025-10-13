@@ -1,0 +1,54 @@
+@use '../helpers/index' as *;
+
+.dotted-border-bottom {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    bottom: rem(-13);
+
+    content: '';
+    display: none;
+    width: 100%;
+    height: rem(1);
+
+    background: repeating-linear-gradient(to right, transparent 0 rem(8), #a8acad rem(8) rem(15.5))
+      0 0 / 100% rem(1) no-repeat;
+  }
+
+  @include tablet-l {
+    &::before {
+      display: block;
+    }
+  }
+
+  &--alt {
+    &::before {
+      bottom: rem(0);
+
+      display: block;
+      width: 100%;
+
+      @include desktop-above {
+        max-width: calc(var(--teamCardImageSize) * 6 + var(--teamCardRowGap) * 5);
+      }
+    }
+  }
+
+  &--alt-full {
+    &::before {
+      bottom: rem(0);
+
+      display: block;
+    }
+  }
+
+  &--hidden-tablet {
+    @include tablet {
+      &::before {
+        content: initial;
+      }
+    }
+  }
+}

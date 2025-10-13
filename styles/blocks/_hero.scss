@@ -1,0 +1,399 @@
+@use '../helpers/index' as *;
+
+.hero {
+  position: relative;
+
+  height: 100vh;
+  min-height: rem(840);
+  max-height: rem(1080);
+  padding-bottom: rem(70);
+
+  color: var(--color-light);
+
+  @include tablet-l {
+    min-height: rem(680);
+    max-height: rem(962);
+  }
+
+  @include mobile {
+    min-height: rem(630);
+    max-height: rem(900);
+  }
+
+  &__container {
+    display: flex;
+    column-gap: fluid(328, 50, $desktop, $tablet);
+
+    @include desktop-b-above {
+      column-gap: fluid(506, 250, $desktop-b, 3840);
+    }
+
+    @include tablet-l {
+      column-gap: fluid(70, 0, $tablet-l, $mobile-b);
+    }
+  }
+
+  &__about {
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    max-width: fluid(723, 359);
+    margin-top: fluid(282, 143);
+    margin-left: fluid(22, 0);
+
+    line-height: var(--line-height-sm);
+
+    @include mobile-b {
+      width: 100%;
+    }
+
+    &-title {
+      margin-bottom: fluid(20, 22);
+
+      font-weight: 400;
+      font-size: fluid(64, 38);
+
+      letter-spacing: var(--letter-spacing-xxs);
+      color: var(--color-light-alt);
+
+      @include mobile-b {
+        letter-spacing: -0.04em;
+      }
+
+      &-accent {
+        font-weight: 700;
+
+        @include mobile-b {
+          letter-spacing: -0.027em;
+        }
+      }
+    }
+
+    &-description {
+      max-width: fluid(570, 246);
+
+      font-weight: 400;
+      font-size: fluid(25, 18);
+      line-height: var(--line-height-lg);
+      color: var(--color-light);
+
+      @include mobile-b {
+        margin-bottom: rem(40.5);
+
+        line-height: 1.13;
+      }
+
+      p {
+        --paragraphMarginBottom: #{rem(22)};
+
+        @include mobile-b {
+          --paragraphMarginBottom: #{rem(27)};
+        }
+      }
+    }
+
+    &-advantages {
+      margin-bottom: rem(3);
+
+      font-size: rem(20);
+      font-weight: 900;
+      line-height: var(--line-height-xs);
+
+      &-list {
+        display: flex;
+        column-gap: rem(24);
+      }
+    }
+
+    &-links {
+      margin-top: rem(36);
+
+      &-list {
+        display: flex;
+        column-gap: rem(16);
+      }
+    }
+  }
+
+  &__advantages {
+    z-index: 3;
+
+    flex-shrink: 0;
+    margin-top: fluid(242, 200, $desktop, $tablet);
+
+    font-weight: 900;
+    font-size: fluid(21, 17, $desktop, $tablet);
+    line-height: var(--line-height-xs);
+
+    color: var(--color-light);
+
+    @include tablet-b {
+      margin-left: rem(15);
+    }
+
+    @include tablet-l {
+      margin-left: 0;
+      margin-top: fluid(212, 290, $tablet-l, $mobile-b);
+    }
+
+    &-item {
+      position: relative;
+      rotate: 45deg;
+
+      @include flex-center;
+      @include square(fluid(159, 125));
+
+      &::after {
+        @include abs-center;
+
+        content: '';
+        width: 100%;
+        height: 100%;
+
+        border: rem(8) solid rgba(255, 255, 255, 0.9);
+        background: rgba(6, 37, 91, 0.8);
+
+        opacity: 0.9;
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        translate: -10.2% -11%;
+
+        content: '';
+        @include square(95.5%);
+
+        border: rem(1) solid var(--color-light);
+
+        opacity: 0.6;
+      }
+
+      @include tablet-l {
+        @include square(fluid(120, 85, $tablet-l, $mobile-b));
+
+        font-size: rem(14);
+        font-weight: 400;
+      }
+
+      &--little {
+        translate: -135.5% 0;
+
+        @include square(fluid(133, 104));
+        margin-top: rem(29);
+
+        font-size: fluid(22, 18, $desktop, $tablet);
+
+        &::after {
+          border: rem(9) solid var(--color-blue);
+        }
+
+        &::before {
+          translate: -12% 18%;
+
+          @include square(94%);
+
+          border: rem(1) solid rgba(255, 124, 64, 0.9);
+
+          opacity: 0.9;
+        }
+
+        @include desktop-b-above {
+          translate: -114.5% 0;
+        }
+
+        @include tablet-l {
+          translate: -95.5% 0;
+
+          @include square(fluid(120, 85, $tablet-l, $mobile-b));
+
+          font-size: rem(14);
+          font-weight: 400;
+        }
+      }
+
+      &--big {
+        translate: rem(-13) 0;
+
+        margin-top: rem(-4);
+        @include square(fluid(186, 104));
+
+        font-size: fluid(25, 19, $desktop, $tablet);
+        letter-spacing: var(--letter-spacing-xs);
+
+        &::after {
+          border: rem(10) solid #da5d24;
+        }
+
+        &::before {
+          translate: 14% 14.5%;
+
+          @include square(95%);
+
+          opacity: 0.9;
+        }
+
+        @include desktop-b-above {
+          translate: rem(-400);
+        }
+
+        @include tablet-l {
+          @include square(fluid(120, 85, $tablet-l, $mobile-b));
+
+          font-size: rem(14);
+          font-weight: 400;
+        }
+      }
+    }
+
+    &-text {
+      z-index: 1;
+
+      rotate: -45deg;
+    }
+  }
+
+  &__background {
+    --heroBackgroundRectsSize: #{rem(618)};
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    &-image {
+      width: 100vw;
+      height: 100%;
+      min-height: 100%;
+
+      object-fit: cover;
+      user-select: none;
+    }
+
+    &-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      rotate: 136deg;
+      translate: fluid(247, 175, $desktop, $tablet) rem(90);
+
+      width: fluid(319, 299, $tablet);
+      height: rem(1);
+
+      background: linear-gradient(to left, transparent, var(--color-light));
+
+      @include tablet-b {
+        z-index: 2;
+
+        rotate: 136deg;
+      }
+    }
+
+    &-gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      &--horizontal {
+        width: 100vw;
+        height: 60.4vh;
+
+        background: var(--linear-gradient);
+
+        @include tablet {
+          width: 199.9vw;
+        }
+      }
+
+      &--vertical {
+        translate: -22vh 0;
+
+        width: fluid(1223, 810);
+        height: 103%;
+        min-height: 103vh;
+
+        background: var(--linear-gradient-alt);
+
+        @include tablet {
+          top: 50%;
+          left: 50%;
+          rotate: -78.8deg;
+          translate: -50% -50%;
+
+          width: 150%;
+          min-width: 130vh;
+          height: 150%;
+          min-height: 130vh;
+
+          background: var(--linear-gradient);
+        }
+      }
+    }
+
+    &-rect,
+    &-rect-borders {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 3;
+
+      @include square(var(--heroBackgroundRectsSize));
+
+      opacity: 0.8;
+      rotate: 45deg;
+      translate: fluid(435, 648) fluid(186, 58);
+
+      @include desktop-above {
+        translate: fluid(435, 328, $desktop, 2560) rem(188);
+      }
+
+      @include tablet-l {
+        translate: fluid(600, 500, $tablet-l, $mobile-b) fluid(90, 58, $tablet-l, $mobile-b);
+
+        --heroBackgroundRectsSize: calc(var(--heroBackgroundRectsSize) * 0.75);
+      }
+
+      @include mobile-b {
+        translate: fluid(435, 648) fluid(186, 58);
+
+        --heroBackgroundRectsSize: #{rem(618)};
+      }
+    }
+
+    &-rect {
+      background-color: var(--color-orange);
+
+      &-borders {
+        z-index: 2;
+
+        &::before,
+        &::after {
+          @include abs-center;
+
+          content: '';
+          @include square(100%);
+        }
+
+        &::before {
+          translate: -52.5% -52.5%;
+
+          border: rem(1) solid #ff7c40;
+        }
+
+        &::after {
+          translate: -46.8% -46.8%;
+
+          border: rem(1) solid #fff;
+        }
+      }
+    }
+  }
+}

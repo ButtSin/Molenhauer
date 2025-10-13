@@ -1,0 +1,59 @@
+@use '../helpers/index' as *;
+
+.review-card {
+  width: var(--reviewCardWidth, 100%);
+
+  &__header {
+    margin-bottom: fluid(40, 25);
+  }
+
+  &__logo {
+    width: fluid(202, 125);
+    margin-left: rem(2);
+  }
+
+  &__body {
+    margin-bottom: fluid(91, 16);
+  }
+
+  &__quote {
+    font-family: 'Minion Pro', serif;
+    font-weight: 500;
+    @include fluid-text(19, 14, $desktop, $tablet-l);
+    line-height: var(--line-height-xxl);
+    letter-spacing: 0.015em;
+    color: #4a4b4e;
+
+    @include tablet-l {
+      font-weight: 500;
+      font-size: rem(15);
+      line-height: 1.25;
+      letter-spacing: 0.015em;
+      color: #4a4b4e;
+    }
+  }
+
+  &__author {
+    @include tablet {
+      font-family: 'Mulish', sans-serif;
+    }
+
+    &-name {
+      margin-bottom: fluid(13, 6);
+
+      font-weight: 700;
+      @include fluid-text(20, 15, $desktop, $tablet);
+      line-height: var(--line-height);
+      letter-spacing: var(--letter-spacing);
+      color: var(--color-dark-grey);
+    }
+
+    &-role {
+      font-weight: 600;
+      @include fluid-text(15, 12);
+      line-height: var(--line-height-xxl);
+      letter-spacing: var(--letter-spacing-md);
+      color: var(--color-light-orange);
+    }
+  }
+}

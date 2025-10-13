@@ -1,0 +1,64 @@
+@use 'helpers/index' as *;
+
+:root {
+  --color-dark: #000000;
+  --color-dark-alt: #0e0e0c;
+  --color-dark-light: #313131;
+  --color-light: #ffffff;
+  --color-light-alt: #f7f7f7;
+  --color-grey: #53565a;
+  --color-light-grey: #737b7d;
+  --color-dark-grey: #2f3034;
+  --color-blue: #06255b;
+  --color-light-blue: #abb5c7;
+  --color-dark-orange: #ba4e1d;
+  --color-orange: #da5d24;
+  --color-light-orange: #ff7c40;
+  --color-violet: #f7f9fc;
+  --color-accent: #8ae1e4;
+
+  --scrollbar-color: var(--color-light-orange) var(--color-grey);
+
+  --font-family-base: 'Source Sans Pro', sans-serif;
+  --font-family-second: 'Roboto', sans-serif;
+
+  --line-height-xs: 0.85;
+  --line-height: 1;
+  --line-height-sm: 1.1;
+  --line-height-md: 1.2;
+  --line-height-lg: 1.3;
+  --line-height-lg-alt: 1.37;
+  --line-height-xl: 1.4;
+  --line-height-xl-alt: 1.47;
+  --line-height-xxl: 1.5;
+
+  --letter-spacing-xxxs: -0.03em;
+  --letter-spacing-xxs: -0.022em;
+  --letter-spacing-xs: -0.02em;
+  --letter-spacing-sm: -0.01em;
+  --letter-spacing: 0.01em;
+  --letter-spacing-md: 0.02em;
+  --letter-spacing-lg: 0.052em;
+
+  --container-width: #{fluid(1440, 358)};
+  --container-padding-x: #{fluid(15, 16)};
+
+  --button-height: #{rem(56)};
+  --button-height-little: #{rem(51)};
+  --button-width-big: #{rem(194)};
+  --button-width: #{rem(143)};
+  --button-width-little: #{rem(133)};
+
+  --outline-size: #{rem(1)};
+  --outline-size-big: #{rem(2)};
+  --outline-color: var(--color-orange);
+  --outline: var(--outline-size) solid var(--outline-color);
+  --outline-big: var(--outline-size-big) solid var(--outline-color);
+
+  --linear-gradient: linear-gradient(180deg, var(--color-blue) 0%, rgba(6, 37, 91, 0) 100%);
+  --linear-gradient-alt: linear-gradient(90deg, var(--color-blue) 0%, rgba(6, 37, 91, 0) 100%);
+
+  --shadow-orange: inset 0 0 rem(100) rem(100) rgba(243, 0, 0, 0.25);
+
+  --transition-duration: 0.2s;
+}

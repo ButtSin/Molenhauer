@@ -1,0 +1,72 @@
+@use '../helpers/index' as *;
+
+.burger-button {
+  display: flex;
+  align-items: center;
+  width: rem(107);
+  height: rem(56);
+
+  color: var(--color-dark-grey);
+
+  background-color: var(--color-light);
+
+  @include mobile-b {
+    justify-content: center;
+    width: rem(45);
+    margin-right: rem(16);
+
+    color: var(--color-light);
+
+    background-color: transparent;
+  }
+
+  @include hover(innerElements) {
+    color: var(--color-dark-orange);
+  }
+
+  &:focus-visible {
+    color: var(--color-dark-orange);
+  }
+
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    row-gap: rem(6);
+    width: rem(33);
+    height: rem(23);
+    margin-left: rem(30);
+
+    @include mobile-b {
+      justify-content: center;
+      row-gap: rem(8);
+      width: 100%;
+      height: rem(45);
+      margin-block: 0 rem(4);
+      margin-left: 0;
+    }
+
+    &-line {
+      width: 100%;
+      height: rem(4);
+
+      background-color: currentColor;
+      border-radius: rem(6);
+
+      transition-duration: var(--transition-duration);
+
+      &:first-child {
+        width: 80%;
+        align-self: flex-end;
+      }
+
+      @include mobile-b {
+        height: rem(5);
+
+        &:first-child {
+          width: 75%;
+        }
+      }
+    }
+  }
+}

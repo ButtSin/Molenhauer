@@ -1,0 +1,140 @@
+.loader {
+  --loaderLogoSize: 30vmin;
+  --loaderCirclesBorder: 0.45vmin solid transparent;
+  --loaderCirclesSize: calc(var(--loaderLogoSize) + 15vmin);
+
+  --loaderLogoDurationAppearance: 1s;
+  --loaderCirclesDurationDisappearance: 1s;
+  --loaderDurationDisappearance: 1s;
+
+  --loaderDelayDurationDisappearance: calc(var(--loaderCirclesDurationDisappearance) + 0.2s);
+  --loaderFullDurationDisappearance: 2200;
+  /*
+        calc( var(--loaderDurationDisappearance) + 
+                var(--loaderDelayDurationDisappearance)
+        );
+      */
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  background-color: #06255b;
+
+  &:not(.is-active) {
+    animation: disappearance var(--loaderDurationDisappearance)
+      var(--loaderDelayDurationDisappearance) forwards;
+  }
+
+  &.is-active .loader__circles-container {
+    animation: appearance 1s var(--loaderLogoDurationAppearance) forwards;
+  }
+
+  @media (width <= 52.18625rem) {
+    --loaderLogoSize: 45vmin;
+  }
+
+  @media (width <= 31.31125rem) {
+    --loaderLogoSize: 60vmin;
+  }
+
+  &__logo {
+    width: var(--loaderLogoSize);
+    height: auto;
+
+    opacity: 0;
+
+    user-select: none;
+
+    &.loaded {
+      animation: appearance var(--loaderLogoDurationAppearance) forwards;
+    }
+  }
+
+  &__circles-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    width: var(--loaderCirclesSize);
+    aspect-ratio: 1;
+
+    opacity: 0;
+
+    animation: disappearance var(--loaderCirclesDurationDisappearance);
+  }
+
+  &__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+    border: var(--loaderCirclesBorder);
+
+    animation: appearance 0.5s forwards;
+
+    &--1 {
+      border-top-color: #da5d24;
+
+      animation: rotation 2s infinite linear;
+    }
+
+    &--2 {
+      width: 105%;
+      height: 105%;
+
+      border-top-color: #f7f9fc;
+
+      animation: rotation 3s infinite linear;
+    }
+
+    &--3 {
+      width: 110%;
+      height: 110%;
+
+      border-top-color: #8ae1e4;
+
+      animation: rotation 1.5s infinite linear;
+    }
+  }
+
+  @keyframes rotation {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 360deg;
+    }
+  }
+
+  @keyframes appearance {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes disappearance {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}

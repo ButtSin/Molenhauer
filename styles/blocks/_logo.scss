@@ -1,0 +1,9 @@
+@use '../helpers/index' as *;
+
+.logo {
+  width: fluid(263, 218);
+
+  &--little {
+    width: fluid(72, 54, $desktop, $tablet);
+  }
+}

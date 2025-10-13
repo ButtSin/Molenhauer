@@ -1,0 +1,46 @@
+@use '../helpers/index' as *;
+
+.soc1al-link {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include square(fluid(40, 30));
+
+  font-weight: 500;
+  font-size: fluid(16, 11, $desktop, $tablet);
+  line-height: var(--line-height-xxl);
+  text-align: center;
+  color: var(--color-light-orange);
+
+  border-radius: 50%;
+  border: rem(2) solid var(--color-light-orange);
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    height: rem(44);
+    width: rem(44);
+    content: '';
+  }
+
+  @include hover {
+    color: var(--color-dark);
+    border-color: var(--color-dark);
+  }
+
+  &:focus-visible {
+    color: var(--color-dark);
+    border-color: var(--color-dark);
+
+    outline: none;
+  }
+
+  @include tablet {
+    border-width: rem(1);
+  }
+}

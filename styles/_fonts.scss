@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src:
+    local('SourceSansPro Black'),
+    local('SourceSansPro-Black'),
+    url('../fonts/SourceCodePro-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src:
+    local('SourceSansPro Bold'),
+    local('SourceSansPro-Bold'),
+    url('../fonts/SourceCodePro-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src:
+    local('SourceSansPro SemiBold'),
+    local('SourceSansPro-SemiBold'),
+    url('../fonts/SourceCodePro-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src:
+    local('SourceSansPro Regular'),
+    local('SourceSansPro-Regular'),
+    url('../fonts/SourceCodePro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Minion Pro';
+  src:
+    local('MinionPro Medium'),
+    local('MinionPro-Regular'),
+    url('../fonts/MinionPro-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src:
+    local('Mulish Regular'),
+    local('Mulish-Regular'),
+    url('../fonts/Mulish-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src:
+    local('Mulish Medium'),
+    local('Mulish-Medium'),
+    url('../fonts/Mulish-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src:
+    local('Mulish SemiBold'),
+    local('Mulish-SemiBold'),
+    url('../fonts/Mulish-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src:
+    local('MinionPro Bold'),
+    local('MinionPro-Bold'),
+    url('../fonts/Mulish-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src:
+    local('Mulish ExtraBold'),
+    local('Mulish-ExtraBold'),
+    url('../fonts/Mulish-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:
+    local('Roboto-Regular.woff2'),
+    local('Roboto Regular.woff2'),
+    url('../fonts/Roboto-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:
+    local('Roboto-Medium.woff2'),
+    local('Roboto Medium.woff2'),
+    url('../fonts/Roboto-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

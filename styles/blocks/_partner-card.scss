@@ -1,0 +1,26 @@
+@use '../helpers/index' as *;
+
+.partner-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  min-height: fluid(128, 76, $mobile, $mobile-l);
+
+  &__image {
+    width: fluid(144, 85, $tablet-b, $mobile-l);
+
+    margin-left: fluid(70, 40, $desktop, $tablet-b);
+
+    transition-property: left, right;
+    transition-duration: var(--transition-duration);
+
+    @include tablet-l {
+      position: absolute;
+
+      margin-left: 0;
+
+      will-change: right, left;
+    }
+  }
+}

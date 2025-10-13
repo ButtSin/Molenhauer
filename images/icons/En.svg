@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none">
+    <mask id="mask0_18_270" width="12" height="12" x="0" y="0"
+          maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="6" cy="6" r="6" fill="#D9D9D9"/>
+    </mask>
+    <g mask="url(#mask0_18_270)">
+        <path fill="#FFCE00" d="M-6.95 10.32h29.69v7.36H-6.95v-7.36Z"/>
+        <path fill="#000" d="M-6.95-4.42h29.69v7.37H-6.95v-7.37Z"/>
+        <path fill="#D00" d="M-6.95 2.95h29.69v7.37H-6.95V2.95Z"/>
+        <path fill="#012169" d="M-2.53 0h16.97v12.63H-2.53V0Z"/>
+        <path fill="#fff"
+              d="m-.54 0 6.47 4.76L12.37 0h2.07v1.63L8.08 6.34l6.36 4.69v1.6h-2.12l-6.37-4.7-6.33 4.7h-2.15v-1.58l6.34-4.68-6.34-4.69V0h2Z"/>
+        <path fill="#C8102E"
+              d="m8.71 7.4 5.73 4.18v1.05L7.25 7.4h1.46Zm-4.88.52.16.92-5.09 3.8h-1.43l6.36-4.72ZM14.43 0v.08l-6.6 4.95.06-1.16L13.1 0h1.33ZM-2.52 0l6.34 4.63H2.2l-4.74-3.52V0Z"/>
+        <path fill="#fff"
+              d="M3.86 0v12.63H8.1V0H3.86Zm-6.39 4.21v4.21h16.97v-4.2H-2.53Z"/>
+        <path fill="#C8102E"
+              d="M-2.53 5.08V7.6h16.97V5.08H-2.53ZM4.71 0v12.63h2.54V0H4.71Z"/>
+    </g>
+</svg>

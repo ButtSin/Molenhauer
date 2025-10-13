@@ -1,0 +1,121 @@
+@use '../helpers/index' as *;
+
+.main-page {
+  --mainPageBgExtraSize: 0vw;
+  --mainPageBgSize: 78vw;
+
+  @media (max-width: rem(1670)) and (max-height: rem(870)) {
+    --mainPageBgExtraSize: 10vw;
+  }
+
+  @media (max-width: rem(1600)) {
+    --mainPageBgExtraSize: 10vw;
+  }
+
+  @include desktop-l {
+    --mainPageBgExtraSize: 30vw;
+  }
+
+  @media (max-width: rem(1400)) and (min-height: rem(1000)) {
+    --mainPageBgExtraSize: 40vw;
+  }
+
+  @include tablet-b {
+    --mainPageBgExtraSize: 40vw;
+  }
+
+  &__hero {
+    @include desktop-b-above {
+      z-index: 1;
+    }
+  }
+
+  &__services {
+    margin-bottom: rem(138);
+  }
+
+  &__building-examples {
+    z-index: 1;
+  }
+
+  &__advantages {
+    z-index: 1;
+  }
+
+  &__trusted-partners {
+    position: relative;
+
+    margin-bottom: fluid(68, 113);
+  }
+
+  &__reviews {
+    z-index: 1;
+
+    margin-bottom: fluid(190, 110);
+  }
+
+  &__team {
+    margin-top: fluid(182, 110);
+  }
+
+  &__footer {
+    margin-top: fluid(236, 108);
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    pointer-events: none;
+
+    @include tablet-l {
+      display: none;
+    }
+
+    &-rect {
+      position: absolute;
+      top: 0;
+      left: 0;
+      rotate: 45deg;
+      z-index: -1;
+      translate: -30% fluid(4926, 3300);
+
+      content: '';
+      width: 300vw;
+      height: calc(var(--mainPageBgSize) + var(--mainPageBgExtraSize));
+
+      background-color: var(--color-light);
+
+      @media (min-width: rem($desktop-media)) {
+        translate: -30% fluid(4926, 8026, 1728, 3840);
+      }
+
+      @for $i from 5 through 0 {
+        $newMainPageBgSize: $i * 13;
+
+        @media (min-width: rem(3840.98 - $i * 422.4)) {
+          --mainPageBgSize: #{$newMainPageBgSize}vw;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        bottom: -5%;
+        left: 0;
+        z-index: 1;
+        rotate: 2.3deg;
+
+        content: '';
+        width: 300vw;
+        height: calc(70vw + var(--mainPageBgExtraSize));
+
+        background-color: var(--color-light);
+      }
+    }
+  }
+}

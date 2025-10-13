@@ -1,0 +1,112 @@
+@use '../helpers/index' as *;
+
+.footer {
+  position: relative;
+
+  --footerLegalListGap: #{rem(30)};
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: 0 calc(fluid(156, 107, $desktop, $tablet) * -1);
+
+    height: fluid(156, 107, $desktop, $tablet);
+    width: fluid(143, 98, $desktop, $tablet);
+    content: '';
+
+    background-color: var(--color-blue);
+
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  }
+
+  &__meta {
+    display: grid;
+    grid-template-columns: 0.95fr 1.2fr 0.8fr;
+    align-items: center;
+    padding: fluid(25, 15) fluid(144, 23) fluid(34, 21) fluid(144, 23);
+    gap: rem(20);
+
+    font-weight: 300;
+    font-size: rem(14);
+    line-height: var(--line-height-xl-alt);
+    letter-spacing: 0.005rem;
+    color: var(--color-light);
+
+    background-color: var(--color-blue);
+
+    @include tablet-b {
+      grid-template-columns: 0.95fr 2fr 1.6fr;
+
+      font-size: rem(12);
+      letter-spacing: 0.03em;
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: rem(8.5);
+
+      letter-spacing: var(--letter-spacing-md);
+    }
+  }
+
+  &__legal-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--footerLegalListGap);
+    row-gap: rem(10);
+  }
+
+  &__legal-item {
+    position: relative;
+
+    display: flex;
+
+    &:not(:last-child) {
+      &::after {
+        position: absolute;
+        right: calc(var(--footerLegalListGap) / 2 * -1);
+        top: 50%;
+        translate: 0 -50%;
+
+        content: 'l';
+      }
+    }
+  }
+
+  &__legal-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      translate: 0 -50%;
+
+      content: '';
+      width: 100%;
+      height: rem(44);
+    }
+
+    @include hover(itself) {
+      color: var(--color-orange);
+    }
+
+    &:focus-visible {
+      color: var(--color-orange);
+    }
+  }
+
+  &__copyright {
+    justify-self: center;
+  }
+
+  &__description {
+    justify-self: flex-end;
+  }
+}
