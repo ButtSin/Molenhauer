@@ -1,4 +1,4 @@
-@use '../helpers/index' as *;
+@use "../helpers/index" as *;
 
 .reviews {
   --reviewsMarginBottom: #{rem(33)};
@@ -6,14 +6,17 @@
   --reviewCardWidth: #{fluid(579, 429, $desktop, $tablet-l)};
   --reviewsSliderWidth: #{fluid(578, 428, $desktop, $tablet-l)};
   --reviewsSliderMarginRight: calc(
-    (var(--reviewCardWidth) + (var(--reviewsBodyPaddingLeft)) - var(--reviewsSliderWidth))
+    (
+      var(--reviewCardWidth) +
+        (var(--reviewsBodyPaddingLeft)) - var(--reviewsSliderWidth)
+    )
   );
 
   position: relative;
 
   display: grid;
   grid-template-columns: fluid(328, 210) var(--reviewsSliderWidth) 1fr;
-  grid-template-areas: 'header slider';
+  grid-template-areas: "header slider";
   column-gap: fluid(104, 15, $desktop, $tablet-l);
 
   @include tablet-b {
@@ -24,8 +27,8 @@
     --reviewCardWidth: #{fluid(579, 308, $tablet-l, $mobile)};
 
     grid-template-areas:
-      'header'
-      'slider';
+      "header"
+      "slider";
     column-gap: 0;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -78,7 +81,7 @@
     @include tablet-l {
       max-width: 100%;
 
-      font-family: 'Mulish', sans-serif;
+      font-family: "Mulish", sans-serif;
     }
 
     @include mobile {
@@ -97,8 +100,10 @@
     padding-block: fluid(123, 24) fluid(110, 24);
 
     background:
-      url('/images/reviews/border-top.svg') top left/100% auto no-repeat,
-      url('/images/reviews//border-bottom.svg') bottom left/100% auto no-repeat;
+      url("../../Molenhauer/images/reviews/border-top.svg") top left/100% auto
+        no-repeat,
+      url("../../Molenhauer/images/reviews//border-bottom.svg") bottom left/100%
+        auto no-repeat;
 
     @include tablet-b {
       justify-self: flex-end;
@@ -109,10 +114,14 @@
       --reviewsBodyPaddingLeft: #{fluid(73, 44, $tablet-l, $mobile)};
       --reviewsSliderWidth: #{fluid(578, 357, $tablet-l, $mobile)};
       --reviewsSliderMarginRight: calc(
-        (var(--reviewCardWidth) + (var(--reviewsBodyPaddingLeft)) - var(--reviewsSliderWidth))
+        (
+          var(--reviewCardWidth) +
+            (var(--reviewsBodyPaddingLeft)) - var(--reviewsSliderWidth)
+        )
       );
 
-      padding-block: fluid(123, 77, $tablet-l, $mobile) fluid(110, 64, $tablet-l, $mobile);
+      padding-block: fluid(123, 77, $tablet-l, $mobile)
+        fluid(110, 64, $tablet-l, $mobile);
       margin-bottom: var(--reviewsMarginBottom);
       justify-self: auto;
     }

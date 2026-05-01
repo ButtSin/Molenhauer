@@ -1,4 +1,4 @@
-@use '../helpers/index' as *;
+@use "../helpers/index" as *;
 
 .requirements {
   --requirementsFirstColWidth: #{fluid(298, 238, $desktop, $tablet)};
@@ -20,8 +20,8 @@
     grid-template-columns: var(--requirementsFirstColWidth) 1fr;
     column-gap: var(--requirementsFirstColGap);
     grid-template-areas:
-      'title title'
-      'subtitle description-group';
+      "title title"
+      "subtitle description-group";
 
     @include tablet-l {
       display: flex;
@@ -62,11 +62,12 @@
       bottom: 0;
       left: 0;
 
-      content: '';
+      content: "";
       width: rem(35);
       height: rem(26);
 
-      background: url('../../images/arrow.svg') no-repeat left / contain;
+      background: url("../../Molenhauer/images/arrow.svg") no-repeat left /
+        contain;
     }
 
     @include tablet {
@@ -111,7 +112,7 @@
     grid-template-columns:
       calc(var(--requirementsFirstColWidth) + var(--requirementsFirstColGap))
       1fr;
-    grid-template-areas: '. list';
+    grid-template-areas: ". list";
     padding-top: fluid(48, 35, $tablet, $mobile);
 
     @include desktop-l {
@@ -150,7 +151,10 @@
   &__item {
     &:nth-of-type(2) {
       .requirements__item-description {
-        width: calc(var(--requirementsDescriptionExtraSize) + fluid(275, 234, $desktop, $tablet));
+        width: calc(
+          var(--requirementsDescriptionExtraSize) +
+            fluid(275, 234, $desktop, $tablet)
+        );
 
         @include tablet-l {
           width: 100%;
@@ -161,7 +165,10 @@
 
     &:nth-of-type(3) {
       .requirements__item-description {
-        width: calc(var(--requirementsDescriptionExtraSize) + fluid(267, 235, $desktop, $tablet));
+        width: calc(
+          var(--requirementsDescriptionExtraSize) +
+            fluid(267, 235, $desktop, $tablet)
+        );
 
         @include tablet-l {
           width: 100%;
@@ -187,7 +194,10 @@
     }
 
     &-description {
-      width: calc(var(--requirementsDescriptionExtraSize) + fluid(285, 237, $desktop, $tablet));
+      width: calc(
+        var(--requirementsDescriptionExtraSize) +
+          fluid(285, 237, $desktop, $tablet)
+      );
 
       font-weight: 400;
       font-size: rem(16);

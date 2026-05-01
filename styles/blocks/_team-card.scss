@@ -1,4 +1,4 @@
-@use '../helpers/index' as *;
+@use "../helpers/index" as *;
 
 .team-card {
   --teamCardArrowWidth: #{fluid(19, 24, $desktop, $tablet)};
@@ -61,11 +61,12 @@
       left: 0;
       translate: 0 -50%;
 
-      content: '';
+      content: "";
       width: var(--teamCardArrowWidth);
       height: rem(26);
 
-      background: url('../../images/arrow.svg') no-repeat fluid(0, -3) 50% / contain;
+      background: url("../../Molenhauer/images/arrow.svg") no-repeat
+        fluid(0, -3) 50% / contain;
     }
 
     @include tablet-b {
@@ -79,12 +80,15 @@
     display: grid;
     width: fit-content;
     height: auto;
-    grid-template-columns: var(--teamCardBigImageWidth) minmax(rem(156), rem(240));
+    grid-template-columns: var(--teamCardBigImageWidth) minmax(
+        rem(156),
+        rem(240)
+      );
     grid-template-rows: auto auto 1fr;
     grid-template-areas:
-      'image-container header'
-      'image-container body'
-      'image-container footer';
+      "image-container header"
+      "image-container body"
+      "image-container footer";
     column-gap: fluid(46, 21);
 
     @include tablet {
@@ -162,7 +166,7 @@
           left: 50%;
           translate: -50% -50%;
 
-          content: '';
+          content: "";
           @include square(rem(44));
         }
 
@@ -200,7 +204,7 @@
           right: -19%;
           z-index: -1;
 
-          content: '';
+          content: "";
           width: 86%;
           height: 56%;
 
@@ -217,7 +221,10 @@
   }
 
   &--big-alt {
-    grid-template-columns: var(--teamCardBigImageWidth) minmax(rem(156), rem(258));
+    grid-template-columns: var(--teamCardBigImageWidth) minmax(
+        rem(156),
+        rem(258)
+      );
     column-gap: fluid(40, 15);
 
     @include tablet {
@@ -263,10 +270,12 @@
   &--with-offer {
     .team-card {
       &__image-container {
-        background: url('/images/team/4-1x.webp') no-repeat center / contain;
+        background: url("../../Molenhauer/images/team/4-1x.webp") no-repeat
+          center / contain;
 
         @media (min-resolution: 2dppx) {
-          background: url('/images/team/4.webp') no-repeat center / contain;
+          background: url("../../Molenhauer/images/team/4.webp") no-repeat
+            center / contain;
         }
       }
 
@@ -313,7 +322,7 @@
 
             height: rem(44);
             width: 100%;
-            content: '';
+            content: "";
           }
         }
       }

@@ -1,63 +1,63 @@
-const rootSelector = '[data-js-lang-switcher]';
+const rootSelector = "[data-js-lang-switcher]";
 
 class LangSwitcher {
   selectors = {
-    loader: '.loader',
-    modal: '[data-js-header-modal]',
+    loader: ".loader",
+    modal: "[data-js-header-modal]",
 
-    button: '[data-js-lang-switcher-button]',
+    button: "[data-js-lang-switcher-button]",
 
-    i88n: '[data-js-i18n]',
-    i88nLabel: '[data-js-i18n-aria-label]',
-    i88nTitle: '[data-js-i18n-aria-title]',
-    i88nAria: '[data-js-i18n-aria]',
+    i88n: "[data-js-i18n]",
+    i88nLabel: "[data-js-i18n-aria-label]",
+    i88nTitle: "[data-js-i18n-aria-title]",
+    i88nAria: "[data-js-i18n-aria]",
   };
 
   dataAttrs = {
-    i88n: 'jsI18n',
-    label: 'jsI18nAriaLabel',
-    alt: 'jsI18nAriaAlt',
+    i88n: "jsI18n",
+    label: "jsI18nAriaLabel",
+    alt: "jsI18nAriaAlt",
   };
 
   langs = {
-    jsLangSwitcherEn: 'en',
-    jsLangSwitcherDe: 'de',
-    jsLangSwitcherFr: 'fr',
+    jsLangSwitcherEn: "en",
+    jsLangSwitcherDe: "de",
+    jsLangSwitcherFr: "fr",
   };
 
   messages = {
     en: {
-      nextSlideMessage: 'Next slide',
-      prevSlideMessage: 'Previous slide',
-      paginationBulletMessage: 'Go to slide {{index}}',
-      firstSlideMessage: 'This is the first slide',
-      lastSlideMessage: 'This is the last slide',
+      nextSlideMessage: "Next slide",
+      prevSlideMessage: "Previous slide",
+      paginationBulletMessage: "Go to slide {{index}}",
+      firstSlideMessage: "This is the first slide",
+      lastSlideMessage: "This is the last slide",
     },
 
     de: {
-      nextSlideMessage: 'Nächste Folie',
-      prevSlideMessage: 'Vorherige Folie',
-      paginationBulletMessage: 'Gehe zu Folie {{index}}',
-      firstSlideMessage: 'Dies ist die erste Folie',
-      lastSlideMessage: 'Dies ist die letzte Folie',
+      nextSlideMessage: "Nächste Folie",
+      prevSlideMessage: "Vorherige Folie",
+      paginationBulletMessage: "Gehe zu Folie {{index}}",
+      firstSlideMessage: "Dies ist die erste Folie",
+      lastSlideMessage: "Dies ist die letzte Folie",
     },
 
     fr: {
-      nextSlideMessage: 'Slide suivante',
-      prevSlideMessage: 'Slide précédente',
-      paginationBulletMessage: 'Aller à la slide {{index}}',
-      firstSlideMessage: 'Ceci est la première slide',
-      lastSlideMessage: 'Ceci est la dernière slide',
+      nextSlideMessage: "Slide suivante",
+      prevSlideMessage: "Slide précédente",
+      paginationBulletMessage: "Aller à la slide {{index}}",
+      firstSlideMessage: "Ceci est la première slide",
+      lastSlideMessage: "Ceci est la dernière slide",
     },
   };
 
   propertiesCSS = {
-    timeToDelete: '--loaderFullDurationDisappearance',
+    timeToDelete: "--loaderFullDurationDisappearance",
   };
 
   stateClasses = {
-    isActive: 'is-active',
-    isLock: 'is-lock',
+    isActive: "is-active",
+    isLock: "is-lock",
   };
 
   constructor(rootElement) {
@@ -80,13 +80,17 @@ class LangSwitcher {
   onButtonClick = async (event) => {
     const target = event.target;
 
-    if (target.tagName !== 'BUTTON' || event.target.classList.contains(this.stateClasses.isActive))
+    if (
+      target.tagName !== "BUTTON" ||
+      event.target.classList.contains(this.stateClasses.isActive)
+    )
       return;
 
-    if (this.modalElement.classList.contains(this.stateClasses.isActive)) this.closeModal();
+    if (this.modalElement.classList.contains(this.stateClasses.isActive))
+      this.closeModal();
     this.determineSwitchingLang(target);
     await this.switchLang();
-    this.switchLangEvent = new CustomEvent('switchlang', {
+    this.switchLangEvent = new CustomEvent("switchlang", {
       bubbles: true,
       detail: {
         lang: this.selectedLanguage,
@@ -112,12 +116,12 @@ class LangSwitcher {
 
   createLoader() {
     document.body.insertAdjacentHTML(
-      'afterbegin',
+      "afterbegin",
       `
           <div class='loader is-active'>
               <img 
                   class='loader__logo loaded' 
-                  src='/images/logo.svg' 
+                  src="images/logo.svg" 
                   width='263'
                   height='46' 
                   alt=''
@@ -135,7 +139,9 @@ class LangSwitcher {
   deleteLoader() {
     const loader = document.querySelector(this.selectors.loader);
     const loaderStyles = getComputedStyle(loader);
-    const deletePreloaderTime = loaderStyles.getPropertyValue(this.propertiesCSS.timeToDelete);
+    const deletePreloaderTime = loaderStyles.getPropertyValue(
+      this.propertiesCSS.timeToDelete,
+    );
 
     loader.classList.remove(this.stateClasses.isActive);
 
@@ -155,13 +161,14 @@ class LangSwitcher {
   }
 
   activeScroll() {
-    document.documentElement.removeAttribute('style');
-    document.body.removeAttribute('style');
+    document.documentElement.removeAttribute("style");
+    document.body.removeAttribute("style");
   }
 
   blockScroll() {
-    document.documentElement.style = 'overflow: hidden; scrollbar-gutter: stable';
-    document.body.style = 'overflow: hidden';
+    document.documentElement.style =
+      "overflow: hidden; scrollbar-gutter: stable";
+    document.body.style = "overflow: hidden";
   }
 
   async switchLang() {
@@ -178,9 +185,11 @@ class LangSwitcher {
   }
 
   async loadLang() {
-    const basePath = '../langs/';
+    const basePath = "../langs/";
 
-    let loadLangPromise = await import(basePath + this.selectedLanguage + '.js');
+    let loadLangPromise = await import(
+      basePath + this.selectedLanguage + ".js"
+    );
     this.selectedLanguageText = loadLangPromise.default;
   }
 
@@ -193,19 +202,28 @@ class LangSwitcher {
   }
 
   changeAria() {
-    const translatableAriaElements = document.querySelectorAll(this.selectors.i88nAria);
+    const translatableAriaElements = document.querySelectorAll(
+      this.selectors.i88nAria,
+    );
 
     translatableAriaElements.forEach((item) => {
-      if (item.hasAttribute('aria-label')) {
-        ('aria-label', this.selectedLanguageText[item.dataset[this.dataAttrs.label]]);
+      if (item.hasAttribute("aria-label")) {
+        ("aria-label",
+          this.selectedLanguageText[item.dataset[this.dataAttrs.label]]);
 
-        if (item.hasAttribute('title')) {
-          item.setAttribute('title', this.selectedLanguageText[item.dataset[this.dataAttrs.label]]);
+        if (item.hasAttribute("title")) {
+          item.setAttribute(
+            "title",
+            this.selectedLanguageText[item.dataset[this.dataAttrs.label]],
+          );
         }
       }
 
-      if (item.hasAttribute('alt')) {
-        item.setAttribute('alt', this.selectedLanguageText[item.dataset[this.dataAttrs.alt]]);
+      if (item.hasAttribute("alt")) {
+        item.setAttribute(
+          "alt",
+          this.selectedLanguageText[item.dataset[this.dataAttrs.alt]],
+        );
       }
 
       /*
@@ -217,7 +235,7 @@ class LangSwitcher {
   // TODO: Сделать сохранение выбранного языка в кеш
 
   bindEvents() {
-    this.rootElement.addEventListener('click', this.onButtonClick);
+    this.rootElement.addEventListener("click", this.onButtonClick);
   }
 }
 

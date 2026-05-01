@@ -1,15 +1,15 @@
 (function () {
   const SELECTORS = {
-    preloader: '.loader',
+    preloader: ".loader",
   };
   const PROPERTIES = {
-    timeToDelete: '--loaderFullDurationDisappearance',
+    timeToDelete: "--loaderFullDurationDisappearance",
   };
   const STATE_CLASSES = {
-    isActive: 'is-active',
+    isActive: "is-active",
   };
   const STORAGE_KEYS = {
-    visit: 'visit',
+    visit: "visit",
   };
   const LOAD_TIMEOUT = 10000;
 
@@ -21,21 +21,23 @@
   }
 
   function activeScroll() {
-    document.documentElement.removeAttribute('style');
-    document.body.removeAttribute('style');
+    document.documentElement.removeAttribute("style");
+    document.body.removeAttribute("style");
   }
 
   function deletePreloader(event) {
     const preloader = document.querySelector(SELECTORS.preloader);
     const preloaderStyles = getComputedStyle(preloader);
-    DELETE_PRELOADER_TIMEOUT = preloaderStyles.getPropertyValue(PROPERTIES.timeToDelete);
+    DELETE_PRELOADER_TIMEOUT = preloaderStyles.getPropertyValue(
+      PROPERTIES.timeToDelete,
+    );
 
     preloader.classList.remove(STATE_CLASSES.isActive);
 
     if (event) {
       clearTimeout(timeoutId);
     } else {
-      window.removeEventListener('load', deletePreloader);
+      window.removeEventListener("load", deletePreloader);
     }
 
     setTimeout(() => {
@@ -52,12 +54,12 @@
   }
 
   document.body.insertAdjacentHTML(
-    'afterbegin',
+    "afterbegin",
     `
       <div class="loader is-active">
           <img 
               class="loader__logo" 
-              src="/images/logo.svg" 
+              src="images/logo.svg" 
               width="263"
               height="46" 
               alt=""
@@ -73,5 +75,5 @@
   );
 
   timeoutId = setTimeout(deletePreloader, LOAD_TIMEOUT);
-  window.addEventListener('load', deletePreloader);
+  window.addEventListener("load", deletePreloader);
 })();

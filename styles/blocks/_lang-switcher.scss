@@ -1,4 +1,4 @@
-@use '../helpers/index' as *;
+@use "../helpers/index" as *;
 
 .lang-switcher {
   position: relative;
@@ -30,7 +30,7 @@
     &::after {
       @include abs-center;
 
-      content: '';
+      content: "";
       @include square(rem(44));
 
       border-radius: 50%;
@@ -44,7 +44,7 @@
       left: 0;
       translate: 0 -50%;
 
-      content: '';
+      content: "";
       @include square(rem(12));
 
       background-size: contain;
@@ -62,19 +62,19 @@
 
     &--de {
       &::before {
-        background-image: url('../../images/icons/De.svg');
+        background-image: url("../../Molenhauer/images/icons/De.svg");
       }
     }
 
     &--en {
       &::before {
-        background-image: url('../../images/icons/En.svg');
+        background-image: url("../../Molenhauer/images/icons/En.svg");
       }
     }
 
     &--fr {
       &::before {
-        background-image: url('../../images/icons/Fr.svg');
+        background-image: url("../../Molenhauer/images/icons/Fr.svg");
       }
     }
 

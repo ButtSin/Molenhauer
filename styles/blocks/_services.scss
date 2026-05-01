@@ -1,4 +1,4 @@
-@use '../helpers/index' as *;
+@use "../helpers/index" as *;
 
 .services {
   padding-top: fluid(106, 95, $desktop, $tablet);
@@ -87,8 +87,9 @@
         width: rem(119);
         height: rem(31);
 
-        background: url('../../images/services/2.webp') no-repeat center / contain;
-        content: '';
+        background: url("../../Molenhauer/images/services/2.webp") no-repeat
+          center / contain;
+        content: "";
         rotate: -45deg;
 
         @include tablet-l {
@@ -102,18 +103,18 @@
         left: fluid(372, 228, $desktop, $tablet);
         rotate: -45deg;
 
-        content: '';
+        content: "";
         width: fluid(715, 430, $desktop, $tablet);
         height: fluid(497, 300, $desktop, $tablet);
 
         background: no-repeat center / contain;
 
         @media (min-resolution: 0dppx) {
-          background-image: url('../../images/services/3-1.webp');
+          background-image: url("../../Molenhauer/images/services/3-1.webp");
         }
 
         @media (min-resolution: 2dppx) {
-          background-image: url('../../images/services/3.webp');
+          background-image: url("../../Molenhauer/images/services/3.webp");
         }
 
         @include desktop-above {
@@ -124,7 +125,8 @@
         @media (min-width: rem($desktop-b)) {
           left: 19.4%;
           bottom: 37.5%;
-          translate: fluid(-400, 0, $desktop-b, 3840) fluid(460, 0, $desktop-b, 3840);
+          translate: fluid(-400, 0, $desktop-b, 3840)
+            fluid(460, 0, $desktop-b, 3840);
         }
 
         @include tablet-l {
@@ -259,7 +261,7 @@
     left: 0;
     translate: 9% fluid(65.5, -188, $desktop, $tablet);
 
-    content: '';
+    content: "";
     @include square(41.32vw);
 
     background-color: var(--color-violet);
@@ -277,7 +279,8 @@
 
       @include tablet-b-above {
         rotate: -45deg;
-        translate: fluid(76, -20, $desktop, $tablet-b) fluid(-251, -133, $desktop, $tablet-b);
+        translate: fluid(76, -20, $desktop, $tablet-b)
+          fluid(-251, -133, $desktop, $tablet-b);
 
         display: block;
         margin-top: 100%;
@@ -290,7 +293,8 @@
       }
 
       @include desktop-b-above {
-        translate: fluid(76, 716, $desktop-b, 3840) fluid(-251, -920, $desktop-b, 3840);
+        translate: fluid(76, 716, $desktop-b, 3840)
+          fluid(-251, -920, $desktop-b, 3840);
       }
     }
   }
@@ -300,54 +304,57 @@
     top: 0;
     left: 0;
     z-index: 10000;
-    translate: fluid(-202, -237, $desktop-b, $desktop) fluid(1204, 838, $desktop-b, $desktop);
+    translate: fluid(-202, -237, $desktop-b, $desktop)
+      fluid(1204, 838, $desktop-b, $desktop);
 
     display: grid;
     width: 100%;
     grid-template-areas:
-      '. c1 .'
-      '. c2 c3'
-      '. c4 .'
-      'c5 c6 .';
+      ". c1 ."
+      ". c2 c3"
+      ". c4 ."
+      "c5 c6 .";
     grid-template-columns: repeat(3, fluid(264, 182, $desktop, $tablet));
     grid-template-rows: repeat(4, fluid(264, 182, $desktop, $tablet));
     column-gap: fluid(35, 16, $desktop, $tablet);
     row-gap: fluid(26, 16, $desktop, $tablet);
 
     @include desktop {
-      translate: fluid(-237, -172, $desktop, $tablet) fluid(838, 206, $desktop, $tablet);
+      translate: fluid(-237, -172, $desktop, $tablet)
+        fluid(838, 206, $desktop, $tablet);
     }
 
     @media (min-height: rem(1000)) and (max-width: rem(1600)) {
       grid-template-areas:
-        '. c1 .'
-        '. c2 c3'
-        '. c4 .'
-        '. c6 c5';
+        ". c1 ."
+        ". c2 c3"
+        ". c4 ."
+        ". c6 c5";
     }
 
     @include tablet-b {
       grid-template-areas:
-        '. c1 .'
-        '. c2 c3'
-        '. c4 .'
-        '. c6 c5';
+        ". c1 ."
+        ". c2 c3"
+        ". c4 ."
+        ". c6 c5";
     }
 
     @include tablet-l {
       left: 0;
       top: 0;
-      translate: fluid(0, -16, $tablet, $mobile) fluid(402, 171, $tablet, $mobile);
+      translate: fluid(0, -16, $tablet, $mobile)
+        fluid(402, 171, $tablet, $mobile);
 
       column-gap: fluid(16, 8, $tablet, $mobile);
       row-gap: fluid(16, 8, $tablet, $mobile);
       grid-template-columns: repeat(3, fluid(182, 166, $tablet, $mobile));
       grid-template-rows: repeat(4, fluid(182, 166, $tablet, $mobile));
       grid-template-areas:
-        'c1 . .'
-        'c2 c4 .'
-        '. c5 c3'
-        '. . c6';
+        "c1 . ."
+        "c2 c4 ."
+        ". c5 c3"
+        ". . c6";
     }
   }
 
@@ -490,7 +497,7 @@
         rotate: 45deg;
         translate: -50% 0%;
 
-        content: '';
+        content: "";
 
         @include square(rem(23));
 

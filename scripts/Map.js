@@ -1,4 +1,4 @@
-const rootSelector = '[data-js-map]';
+const rootSelector = "[data-js-map]";
 
 class Map {
   constructor(rootElement) {
@@ -13,9 +13,11 @@ class Map {
     };
     this.placemarkCenter = this.coordinates.desktop;
     this.mediaQueries = {
-      mobile: window.matchMedia('(max-width: 824.98px)'),
-      tablet: window.matchMedia('(min-width: 824.98px) and (max-width: 1180.98px)'),
-      desktop: window.matchMedia('(min-width: 1180.98px)'),
+      mobile: window.matchMedia("(max-width: 824.98px)"),
+      tablet: window.matchMedia(
+        "(min-width: 824.98px) and (max-width: 1180.98px)",
+      ),
+      desktop: window.matchMedia("(min-width: 1180.98px)"),
     };
     this.mapCenter = this.getCurrentCoordinates();
 
@@ -36,9 +38,9 @@ class Map {
       this.hideControls();
       this.addPlacemark();
 
-      this.map.behaviors.disable('dblClickZoom');
-      this.map.behaviors.disable('multiTouch');
-      this.map.behaviors.disable(['scrollZoom']);
+      this.map.behaviors.disable("dblClickZoom");
+      this.map.behaviors.disable("multiTouch");
+      this.map.behaviors.disable(["scrollZoom"]);
     });
   }
 
@@ -52,13 +54,13 @@ class Map {
   };
 
   hideControls() {
-    this.map.controls.remove('geolocationControl');
-    this.map.controls.remove('searchControl');
-    this.map.controls.remove('trafficControl');
-    this.map.controls.remove('typeSelector');
-    this.map.controls.remove('fullscreenControl');
-    this.map.controls.remove('zoomControl');
-    this.map.controls.remove('rulerControl');
+    this.map.controls.remove("geolocationControl");
+    this.map.controls.remove("searchControl");
+    this.map.controls.remove("trafficControl");
+    this.map.controls.remove("typeSelector");
+    this.map.controls.remove("fullscreenControl");
+    this.map.controls.remove("zoomControl");
+    this.map.controls.remove("rulerControl");
   }
 
   addPlacemark() {
@@ -67,8 +69,8 @@ class Map {
       this.placemarkCenter,
       {},
       {
-        iconLayout: 'default#image',
-        iconImageHref: '/images/footer-contacts/placemark.svg',
+        iconLayout: "default#image",
+        iconImageHref: "../../Molenhauer/images/footer-contacts/placemark.svg",
         iconImageSize: [50, 50],
         iconImageOffset: [-25, -45],
       },
